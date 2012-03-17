@@ -44,7 +44,7 @@
   }
   
   // Uncomment the following line to preserve selection between presentations.
-  // self.clearsSelectionOnViewWillAppear = NO;
+  self.clearsSelectionOnViewWillAppear = NO;
   
   // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
   // self.navigationItem.rightBarButtonItem = self.editButtonItem;
@@ -142,9 +142,10 @@
 {
   EventDetailTableViewController *eventDetail = (EventDetailTableViewController*)segue.destinationViewController;
   UITableViewCell *selectedCell = sender;
-  NSInteger selectedIndex = [self.tableView indexPathForCell:selectedCell].row;
-  eventDetail.event = [events objectAtIndex:selectedIndex];
-  NSLog(@"segue: %@, sender: %@", [segue description], [sender description]);
+  NSIndexPath *selectedIndexPath = [self.tableView indexPathForCell:selectedCell];
+  eventDetail.event = [events objectAtIndex:selectedIndexPath.row];
+//  NSLog(@"segue: %@, sender: %@", [segue description], [sender description]);
+  [self.tableView deselectRowAtIndexPath:selectedIndexPath animated:YES];
 }
 
 @end

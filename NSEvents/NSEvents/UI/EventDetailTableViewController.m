@@ -15,6 +15,7 @@
 
 @implementation EventDetailTableViewController
 @synthesize event;
+@synthesize eventTitleCell;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -28,8 +29,7 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  NSLog(@"Event: %@", [event title]);
-  
+  self.eventTitleCell.textLabel.text = event.title;
   // Uncomment the following line to preserve selection between presentations.
   // self.clearsSelectionOnViewWillAppear = NO;
   
@@ -39,6 +39,7 @@
 
 - (void)viewDidUnload
 {
+  [self setEventTitleCell:nil];
   [super viewDidUnload];
   // Release any retained subviews of the main view.
   // e.g. self.myOutlet = nil;
