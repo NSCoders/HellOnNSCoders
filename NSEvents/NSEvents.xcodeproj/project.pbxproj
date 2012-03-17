@@ -71,8 +71,6 @@
 		8A23B2111514BD5900AC8F1D /* NewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A23B2101514BD5900AC8F1D /* NewsTableViewController.m */; };
 		8A23B2141514BEEF00AC8F1D /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B2131514BEEF00AC8F1D /* Twitter.framework */; };
 		8A23B2151514BEF400AC8F1D /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B2131514BEEF00AC8F1D /* Twitter.framework */; };
-		8A23B21D1514D76C00AC8F1D /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A23B21B1514D76C00AC8F1D /* background.png */; };
-		8A23B21E1514D76C00AC8F1D /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A23B21C1514D76C00AC8F1D /* background@2x.png */; };
 		8A23B2251514D94F00AC8F1D /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A23B2241514D94F00AC8F1D /* AboutViewController.m */; };
 		8A23B2281514DA5C00AC8F1D /* SponsorsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A23B2271514DA5C00AC8F1D /* SponsorsTableViewController.m */; };
 /* End PBXBuildFile section */
@@ -443,8 +441,6 @@
 			files = (
 				651525A5151493BE0074FA19 /* InfoPlist.strings in Resources */,
 				651525AE151493BE0074FA19 /* MainStoryboard.storyboard in Resources */,
-				8A23B21D1514D76C00AC8F1D /* background.png in Resources */,
-				8A23B21E1514D76C00AC8F1D /* background@2x.png in Resources */,
 				8A1E712D1514DBDA00210D7B /* about.png in Resources */,
 				8A1E712E1514DBDA00210D7B /* about@2x.png in Resources */,
 				8A1E712F1514DBDA00210D7B /* aboutact.png in Resources */,
@@ -619,6 +615,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSEvents/NSEvents-Prefix.pch";
 				INFOPLIST_FILE = "NSEvents/NSEvents-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -634,6 +631,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSEvents/NSEvents-Prefix.pch";
 				INFOPLIST_FILE = "NSEvents/NSEvents-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
