@@ -29,6 +29,7 @@
 		652C17F21514EFB4004BEF69 /* EventParseMapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 652C17F11514EFB4004BEF69 /* EventParseMapperTests.m */; };
 		655A6B191514A0FC00A4B2B7 /* EventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 655A6B181514A0FC00A4B2B7 /* EventTableViewController.m */; };
 		65AB72181514F12A00B98F80 /* EventParseMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AB72171514F12A00B98F80 /* EventParseMapper.m */; };
+		65AB721F1514F97100B98F80 /* SessionParseMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AB721E1514F97100B98F80 /* SessionParseMapper.m */; };
 		6D015B621514C74000607F4A /* LocationPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D015B611514C74000607F4A /* LocationPoint.m */; };
 		6D015B641514CBFD00607F4A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D015B631514CBFD00607F4A /* CoreLocation.framework */; };
 		6D015B651514CC0500607F4A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D015B631514CBFD00607F4A /* CoreLocation.framework */; };
@@ -131,6 +132,8 @@
 		655A6B181514A0FC00A4B2B7 /* EventTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewController.m; sourceTree = "<group>"; };
 		65AB72161514F12A00B98F80 /* EventParseMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventParseMapper.h; sourceTree = "<group>"; };
 		65AB72171514F12A00B98F80 /* EventParseMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventParseMapper.m; sourceTree = "<group>"; };
+		65AB721D1514F97100B98F80 /* SessionParseMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionParseMapper.h; sourceTree = "<group>"; };
+		65AB721E1514F97100B98F80 /* SessionParseMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionParseMapper.m; sourceTree = "<group>"; };
 		6D015B601514C74000607F4A /* LocationPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationPoint.h; path = Helper/LocationPoint.h; sourceTree = "<group>"; };
 		6D015B611514C74000607F4A /* LocationPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationPoint.m; path = Helper/LocationPoint.m; sourceTree = "<group>"; };
 		6D015B631514CBFD00607F4A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -319,6 +322,8 @@
 				652C17B01514BC2E004BEF69 /* SponsorTests.h */,
 				652C17B11514BC2E004BEF69 /* SponsorTests.m */,
 				651525BF151493BE0074FA19 /* Supporting Files */,
+				65AB721D1514F97100B98F80 /* SessionParseMapper.h */,
+				65AB721E1514F97100B98F80 /* SessionParseMapper.m */,
 			);
 			path = NSEventsTests;
 			sourceTree = "<group>";
@@ -548,6 +553,7 @@
 				8A23B2251514D94F00AC8F1D /* AboutViewController.m in Sources */,
 				8A23B2281514DA5C00AC8F1D /* SponsorsTableViewController.m in Sources */,
 				65AB72181514F12A00B98F80 /* EventParseMapper.m in Sources */,
+				65AB721F1514F97100B98F80 /* SessionParseMapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
