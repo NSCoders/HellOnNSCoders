@@ -64,18 +64,48 @@ Sponsor *instance;
 
 - (void)testHasALogoURL
 {
-  NSURL *internalURL = [NSURL URLWithString:@"http://www.url.com"];
-  instance.logoURL = internalURL;
+  instance.logoURL = @"http://www.url.com";
   
-  STAssertTrue(instance.logoURL == internalURL, @"Cannot set a logo URL for a sponsor");
+  STAssertTrue(instance.logoURL == @"http://www.url.com", @"Cannot set a logo URL for a sponsor");
 }
 
 - (void)testHasAURL
 {
-  NSURL *internalURL = [NSURL URLWithString:@"http://www.url.com"];
-  instance.webURL = internalURL;
+  instance.webURL = @"http://www.url.com";
     
-  STAssertTrue(instance.webURL == internalURL, @"Cannot set a URL for a sponsor");
+  STAssertTrue(instance.webURL == @"http://www.url.com", @"Cannot set a URL for a sponsor");
+}
+
+- (void)testCanMapParseObject
+{
+    PFObject *object = [PFObject objectWithClassName:@"Sponsor"];
+    [object setObject:@"name" forKey:@"name"];
+    [object setObject:@"email@nscoders.org" forKey:@"email"];
+    [object setObject:@"@anonymous" forKey:@"twitter"];
+    [object setObject:@"Bio" forKey:@"bio"];
+    [object setObject:@"http://www.nscoders.org/logo.png" forKey:@"logoURL"];
+    [object setObject:@"http://www.nscoders.org" forKey:@"webURL"];
+    [object setObject:@"555555555" forKey:@"phoneNumber"];
+    [object save];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Sponsor"];
+    PFObject *objectFromParser = [query getObjectWithId:object.objectId];
+    
+    Sponsor *mapedObject = [[Sponsor alloc] init];
+    [mapedObject mapParserObject:objectFromParser];
+    
+    BOOL assert_entity_mapping = 
+    [mapedObject.name isEqualToString:@"name"]
+    && [mapedObject.email isEqualToString:@"email@nscoders.org"]
+    && [mapedObject.twitter isEqualToString:@"@anonymous"]
+    && [mapedObject.bio isEqualToString:@"Bio"]
+    && [mapedObject.logoURL isEqualToString:@"http://www.nscoders.org/logo.png"]
+    && [mapedObject.webURL isEqualToString:@"http://www.nscoders.org"]
+    && [mapedObject.phoneNumber isEqualToString:@"555555555"];
+
+    STAssertTrue(assert_entity_mapping, @"Could not map sponsor from parse object");
+    
+    [objectFromParser delete];
 }
 
 @end

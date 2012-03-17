@@ -1,13 +1,13 @@
 #import "ParseActiveRecord.h"
 
-@interface Sponsor : NSObject
+@interface Sponsor : ParseActiveRecord
 
 @property (copy) NSString   *name;
 @property (copy) NSString   *email;
 @property (copy) NSString   *twitter;
 @property (copy) NSString   *bio;
-@property (copy) NSURL  *logoURL;
-@property (copy) NSURL  *webURL;
+@property (copy) NSString   *logoURL;
+@property (copy) NSString   *webURL;
 @property (copy) NSString   *phoneNumber;
 
 @end
