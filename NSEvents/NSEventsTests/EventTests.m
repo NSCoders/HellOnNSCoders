@@ -25,9 +25,9 @@ Event *instance;
 
 - (void)testHasAnIdentifier
 {
-  instance.identifier = @"Identifier";
+  instance.objectId = @"Identifier";
   
-  STAssertEquals(instance.identifier, @"Identifier", @"Cannot set an identifier for an event");
+  STAssertEquals(instance.objectId, @"Identifier", @"Cannot set an identifier for an event");
 }
 
 - (void)testHasATitle
@@ -82,5 +82,35 @@ Event *instance;
   STAssertTrue([instance.sessions count] == 1, @"Test", @"Cannot add a session for an event");
 }
 
+- (void)testCanMapParserEvent
+{
+    NSDateFormatter *dateFormater = [[NSDateFormatter alloc] init];
+    [dateFormater setDateFormat:@"dd/mm/yyyy"];
+    
+    NSDate *start_date = [dateFormater dateFromString:@"01/01/2012"];
+    NSDate *end_date = [dateFormater dateFromString:@"02/01/2012"];
+    
+    PFObject *event = [PFObject objectWithClassName:@"Event"];
+    [event setObject:@"Test Title" forKey:@"title"];
+    [event setObject:end_date forKey:@"endDate"];
+    [event setObject:start_date forKey:@"startDate"];
+    [event setObject:@"#testhashtag" forKey:@"hashtag"];
+    [event save];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
+    PFObject *eventFromParser = [query getObjectWithId:event.objectId];
+    
+    Event *mapedEvent = [[Event alloc] init];
+    [mapedEvent mapParserObject:eventFromParser];
+    
+    BOOL assert_entity_mapping = [mapedEvent.title isEqualToString:@"Test Title"]
+    && [mapedEvent.startDate isEqualToDate:start_date]
+    && [mapedEvent.endDate isEqualToDate:end_date]
+    && [mapedEvent.hashtag isEqualToString:@"#testhashtag"];
+    
+    STAssertTrue(assert_entity_mapping, @"Could not maps events from parse object");
+    
+    [eventFromParser delete];
+}
 
 @end

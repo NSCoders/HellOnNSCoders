@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D46B90F1515348C00E9B5B6 /* ParseActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D46B90E1515348B00E9B5B6 /* ParseActiveRecord.m */; };
 		6515259B151493BD0074FA19 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6515259A151493BD0074FA19 /* UIKit.framework */; };
 		6515259D151493BD0074FA19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6515259C151493BD0074FA19 /* Foundation.framework */; };
 		6515259F151493BD0074FA19 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6515259E151493BD0074FA19 /* CoreGraphics.framework */; };
@@ -24,11 +25,7 @@
 		651525D515149CB60074FA19 /* LocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 651525D415149CB60074FA19 /* LocationTests.m */; };
 		651525D815149D360074FA19 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 651525D715149D360074FA19 /* Location.m */; };
 		652C17B21514BC2E004BEF69 /* SponsorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 652C17B11514BC2E004BEF69 /* SponsorTests.m */; };
-		652C17EF1514EA85004BEF69 /* EventRepositoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 652C17EE1514EA85004BEF69 /* EventRepositoryTests.m */; };
-		652C17F21514EFB4004BEF69 /* EventParseMapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 652C17F11514EFB4004BEF69 /* EventParseMapperTests.m */; };
 		655A6B191514A0FC00A4B2B7 /* EventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 655A6B181514A0FC00A4B2B7 /* EventTableViewController.m */; };
-		65AB72181514F12A00B98F80 /* EventParseMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AB72171514F12A00B98F80 /* EventParseMapper.m */; };
-		65AB722A1514FA9900B98F80 /* SessionParseMapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AB721E1514F97100B98F80 /* SessionParseMapperTests.m */; };
 		65AB722D1514FD9100B98F80 /* SessionParseMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AB722C1514FD9100B98F80 /* SessionParseMapper.m */; };
 		65AB722E1514FF2700B98F80 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A23B1E41514AFC400AC8F1D /* Session.m */; };
 		65AB722F1514FF2700B98F80 /* Speaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A23B1E61514AFC400AC8F1D /* Speaker.m */; };
@@ -96,6 +93,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D46B90B1515245700E9B5B6 /* ParseActiveRecordProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseActiveRecordProtocol.h; sourceTree = "<group>"; };
+		3D46B90D1515348B00E9B5B6 /* ParseActiveRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseActiveRecord.h; sourceTree = "<group>"; };
+		3D46B90E1515348B00E9B5B6 /* ParseActiveRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseActiveRecord.m; sourceTree = "<group>"; };
 		65152596151493BD0074FA19 /* NSEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6515259A151493BD0074FA19 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6515259C151493BD0074FA19 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -125,16 +125,8 @@
 		652C17AD1514BC18004BEF69 /* Sponsor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sponsor.m; sourceTree = "<group>"; };
 		652C17B01514BC2E004BEF69 /* SponsorTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SponsorTests.h; sourceTree = "<group>"; };
 		652C17B11514BC2E004BEF69 /* SponsorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SponsorTests.m; sourceTree = "<group>"; };
-		652C17ED1514EA85004BEF69 /* EventRepositoryTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventRepositoryTests.h; sourceTree = "<group>"; };
-		652C17EE1514EA85004BEF69 /* EventRepositoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventRepositoryTests.m; sourceTree = "<group>"; };
-		652C17F01514EFB4004BEF69 /* EventParseMapperTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventParseMapperTests.h; sourceTree = "<group>"; };
-		652C17F11514EFB4004BEF69 /* EventParseMapperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventParseMapperTests.m; sourceTree = "<group>"; };
 		655A6B171514A0FC00A4B2B7 /* EventTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableViewController.h; sourceTree = "<group>"; };
 		655A6B181514A0FC00A4B2B7 /* EventTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewController.m; sourceTree = "<group>"; };
-		65AB72161514F12A00B98F80 /* EventParseMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventParseMapper.h; sourceTree = "<group>"; };
-		65AB72171514F12A00B98F80 /* EventParseMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventParseMapper.m; sourceTree = "<group>"; };
-		65AB721D1514F97100B98F80 /* SessionParseMapperTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionParseMapperTests.h; sourceTree = "<group>"; };
-		65AB721E1514F97100B98F80 /* SessionParseMapperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionParseMapperTests.m; sourceTree = "<group>"; };
 		65AB722B1514FD9100B98F80 /* SessionParseMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionParseMapper.h; sourceTree = "<group>"; };
 		65AB722C1514FD9100B98F80 /* SessionParseMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionParseMapper.m; sourceTree = "<group>"; };
 		6D015B601514C74000607F4A /* LocationPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationPoint.h; path = Helper/LocationPoint.h; sourceTree = "<group>"; };
@@ -310,16 +302,10 @@
 		651525BE151493BE0074FA19 /* NSEventsTests */ = {
 			isa = PBXGroup;
 			children = (
-				652C17F01514EFB4004BEF69 /* EventParseMapperTests.h */,
-				652C17F11514EFB4004BEF69 /* EventParseMapperTests.m */,
-				652C17ED1514EA85004BEF69 /* EventRepositoryTests.h */,
-				652C17EE1514EA85004BEF69 /* EventRepositoryTests.m */,
 				651525C4151493BE0074FA19 /* EventTests.h */,
 				651525C5151493BE0074FA19 /* EventTests.m */,
 				651525D315149CB60074FA19 /* LocationTests.h */,
 				651525D415149CB60074FA19 /* LocationTests.m */,
-				65AB721D1514F97100B98F80 /* SessionParseMapperTests.h */,
-				65AB721E1514F97100B98F80 /* SessionParseMapperTests.m */,
 				8A23B1EA1514AFE000AC8F1D /* SessionTest.h */,
 				8A23B1EB1514AFE000AC8F1D /* SessionTest.m */,
 				8A23B1EC1514AFE000AC8F1D /* SpeakerTests.h */,
@@ -343,20 +329,21 @@
 		651525CF151495F80074FA19 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				8A23B1E31514AFC400AC8F1D /* Session.h */,
-				8A23B1E41514AFC400AC8F1D /* Session.m */,
-				8A23B1E51514AFC400AC8F1D /* Speaker.h */,
-				8A23B1E61514AFC400AC8F1D /* Speaker.m */,
 				651525D0151497FF0074FA19 /* Event.h */,
 				651525D1151497FF0074FA19 /* Event.m */,
 				651525D615149D360074FA19 /* Location.h */,
 				651525D715149D360074FA19 /* Location.m */,
-				652C17AC1514BC18004BEF69 /* Sponsor.h */,
-				652C17AD1514BC18004BEF69 /* Sponsor.m */,
-				65AB72161514F12A00B98F80 /* EventParseMapper.h */,
-				65AB72171514F12A00B98F80 /* EventParseMapper.m */,
+				3D46B90B1515245700E9B5B6 /* ParseActiveRecordProtocol.h */,
+				3D46B90D1515348B00E9B5B6 /* ParseActiveRecord.h */,
+				3D46B90E1515348B00E9B5B6 /* ParseActiveRecord.m */,
+				8A23B1E31514AFC400AC8F1D /* Session.h */,
+				8A23B1E41514AFC400AC8F1D /* Session.m */,
 				65AB722B1514FD9100B98F80 /* SessionParseMapper.h */,
 				65AB722C1514FD9100B98F80 /* SessionParseMapper.m */,
+				8A23B1E51514AFC400AC8F1D /* Speaker.h */,
+				8A23B1E61514AFC400AC8F1D /* Speaker.m */,
+				652C17AC1514BC18004BEF69 /* Sponsor.h */,
+				652C17AD1514BC18004BEF69 /* Sponsor.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -560,8 +547,8 @@
 				8A23B2111514BD5900AC8F1D /* NewsTableViewController.m in Sources */,
 				8A23B2251514D94F00AC8F1D /* AboutViewController.m in Sources */,
 				8A23B2281514DA5C00AC8F1D /* SponsorsTableViewController.m in Sources */,
-				65AB72181514F12A00B98F80 /* EventParseMapper.m in Sources */,
 				65AB722D1514FD9100B98F80 /* SessionParseMapper.m in Sources */,
+				3D46B90F1515348C00E9B5B6 /* ParseActiveRecord.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,9 +561,6 @@
 				8A23B1EE1514AFE000AC8F1D /* SessionTest.m in Sources */,
 				8A23B1EF1514AFE000AC8F1D /* SpeakerTests.m in Sources */,
 				652C17B21514BC2E004BEF69 /* SponsorTests.m in Sources */,
-				652C17EF1514EA85004BEF69 /* EventRepositoryTests.m in Sources */,
-				652C17F21514EFB4004BEF69 /* EventParseMapperTests.m in Sources */,
-				65AB722A1514FA9900B98F80 /* SessionParseMapperTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

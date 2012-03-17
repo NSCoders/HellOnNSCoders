@@ -15,7 +15,7 @@
         self.brief = [parserObject objectForKey:@"brief"];
         self.track = [parserObject objectForKey:@"track"];
         self.eventId = [parserObject objectForKey:@"eventId"];
-        self.sessionId = [parserObject objectForKey:@"sessionId"];
+        self.objectId = [parserObject objectForKey:@"sessionId"];
     }
     
     return self;

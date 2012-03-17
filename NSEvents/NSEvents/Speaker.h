@@ -1,6 +1,6 @@
-#import <Foundation/Foundation.h>
+#import "ParseActiveRecord.h"
 
-@interface Speaker : NSObject
+@interface Speaker : ParseActiveRecord
 
 @property (copy) NSString   *firstName;
 @property (copy) NSString   *lastName;

@@ -1,4 +1,4 @@
-#import <Foundation/Foundation.h>
+#import "ParseActiveRecord.h"
 
 @interface Sponsor : NSObject
 

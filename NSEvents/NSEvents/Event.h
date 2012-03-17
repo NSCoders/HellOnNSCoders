@@ -1,18 +1,11 @@
-//
-//  Event.h
-//  NSEvents
-//
-//  Created by Rubén Bernal Verneda on 17/03/12.
-//  Copyright (c) 2012 Atípic software. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 #import "Location.h"
 #import "Session.h"
+#import "ParseActiveRecord.h"
 
-@interface Event : NSObject
+@interface Event : ParseActiveRecord
 
-@property (copy)    NSString*   identifier;
+@property (copy)    NSString*   objectId;
 @property (copy)    NSString*   title;
 @property (strong)  NSDate*     startDate;
 @property (strong)  NSDate*     endDate;

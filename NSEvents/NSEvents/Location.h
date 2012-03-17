@@ -1,6 +1,6 @@
-#import <Foundation/Foundation.h>
+#import "ParseActiveRecord.h"
 
-@interface Location : NSObject
+@interface Location : ParseActiveRecord
 
 @property (assign)  float     longitud;
 @property (assign)  float     latitud;
