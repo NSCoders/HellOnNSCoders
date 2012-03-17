@@ -220,7 +220,6 @@
 		6515258B151493BD0074FA19 = {
 			isa = PBXGroup;
 			children = (
-				6D015B631514CBFD00607F4A /* CoreLocation.framework */,
 				651525A0151493BE0074FA19 /* NSEvents */,
 				651525BE151493BE0074FA19 /* NSEventsTests */,
 				65152599151493BD0074FA19 /* Frameworks */,
@@ -240,6 +239,7 @@
 		65152599151493BD0074FA19 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6D015B631514CBFD00607F4A /* CoreLocation.framework */,
 				8A23B2131514BEEF00AC8F1D /* Twitter.framework */,
 				8A23B1FB1514B05600AC8F1D /* MobileCoreServices.framework */,
 				8A23B1FC1514B05600AC8F1D /* QuartzCore.framework */,
