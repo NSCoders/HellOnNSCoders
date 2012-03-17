@@ -20,16 +20,16 @@ Speaker *instance;
 
 - (void)testHasAFirstName
 {
-  instance.firstName = @"Test";
+  instance.firstName = @"TestFirstName";
   
-  STAssertEquals(instance.firstName, @"Test", @"Cannot set a first name for a speaker");
+  STAssertEquals(instance.firstName, @"TestFirstName", @"Cannot set a first name for a speaker");
 }
 
 - (void)testHasALastName
 {
-  instance.lastName = @"Test";
+  instance.lastName = @"TestLastName";
   
-  STAssertEquals(instance.lastName, @"Test", @"Cannot set a name for a speaker");
+  STAssertEquals(instance.lastName, @"TestLastName", @"Cannot set a name for a speaker");
 }
 
 - (void)testHasAnEmail
@@ -55,16 +55,16 @@ Speaker *instance;
 
 - (void)testHasABio
 {
-  instance.bio = @"@test";
+  instance.bio = @"TestBio";
   
-  STAssertEquals(instance.bio, @"@test", @"Cannot set a bio for a speaker");
+  STAssertEquals(instance.bio, @"TestBio", @"Cannot set a bio for a speaker");
 }
 
 - (void)testHasAGravatarURL
 {
-  instance.gravatarURL = @"@test";
+  instance.email = @"anonymous@nscoder.org";
   
-  STAssertEquals(instance.gravatarURL, @"@test", @"Cannot set a name for a speaker");
+  STAssertNotNil(instance.gravatarURL, @"Cannot set a URL for a speaker");
 }
 
 @end

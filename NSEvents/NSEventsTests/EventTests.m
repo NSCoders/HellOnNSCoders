@@ -33,9 +33,9 @@ Event *instance;
 
 - (void)testHasATitle
 {
-  instance.title = @"Test";
+  instance.title = @"TestTitle";
   
-  STAssertEquals(instance.title, @"Test", @"Cannot set a title for an event");
+  STAssertEquals(instance.title, @"TestTitle", @"Cannot set a title for an event");
 }
 
 - (void)testHasAStartDate

@@ -7,7 +7,7 @@
 @property (copy) NSString   *email;
 @property (copy) NSString   *twitter;
 @property (copy) NSString   *bio;
-@property (copy) NSString   *gravatarURL;
+@property (readonly) NSURL  *gravatarURL;
 @property (copy) NSString   *phoneNumber;
 
 @end

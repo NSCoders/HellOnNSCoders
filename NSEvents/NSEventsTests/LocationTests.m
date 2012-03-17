@@ -23,33 +23,32 @@ Location *instance;
   STAssertNotNil(instance, @"Cannot create instance of Event");
 }
 
-
 - (void)tesHasATitle
 {
-  instance.title = @"Test";
+  instance.title = @"TestTitle";
   
-  STAssertEquals(instance.title, @"Test", @"Cannot set a title for an event");
+  STAssertEquals(instance.title, @"TestTitle", @"Cannot set a title for an event");
 }
 
 - (void)testHasAnAddress
 {
-  instance.address = @"Test";
+  instance.address = @"TestAddress";
   
-  STAssertEquals(instance.address, @"Test", @"Cannot set an address for a location");
+  STAssertEquals(instance.address, @"TestAddress", @"Cannot set an address for a location");
 }
 
 - (void)testHasACity
 {
-  instance.city = @"Test";
+  instance.city = @"TestCity";
   
-  STAssertEquals(instance.city, @"Test", @"Cannot set a city for a location");
+  STAssertEquals(instance.city, @"TestCity", @"Cannot set a city for a location");
 }
 
 - (void)testHasACountry
 {
-  instance.country = @"Test";
+  instance.country = @"TestCountry";
   
-  STAssertEquals(instance.country, @"Test", @"Cannot set a country for a location");
+  STAssertEquals(instance.country, @"TestCountry", @"Cannot set a country for a location");
 }
 
 - (void)testLocationHasLongitude

@@ -29,9 +29,9 @@ Session *instance;
 
 - (void)testHasATitle
 {
-  instance.title = @"Test";
+  instance.title = @"TestTitle";
   
-  STAssertEquals(instance.title, @"Test", @"Cannot set a title for a session");
+  STAssertEquals(instance.title, @"TestTitle", @"Cannot set a title for a session");
 }
 
 - (void)testHasCanAddSpeaker
@@ -44,7 +44,7 @@ Session *instance;
   
   [instance addSpeaker: speaker];
   
-  STAssertTrue([instance.speakers count] == 1, @"Test", @"Cannot set a title for a session");
+  STAssertTrue([instance.speakers count] == 1, @"Cannot set a title for a session");
 }
 
 - (void)testHasAStartDate
@@ -67,23 +67,23 @@ Session *instance;
 
 - (void)testHasARoom
 {
-  instance.room = @"Test";
+  instance.room = @"TestRoom";
   
-  STAssertEquals(instance.room, @"Test", @"Cannot set a room for a session");
+  STAssertEquals(instance.room, @"TestRoom", @"Cannot set a room for a session");
 }
 
 - (void)testHasATrack
 {
-  instance.track = @"Test";
+  instance.track = @"TestTrack";
   
-  STAssertEquals(instance.track, @"Test", @"Cannot set a track for a session");
+  STAssertEquals(instance.track, @"TestTrack", @"Cannot set a track for a session");
 }
 
 - (void)testHasABrief
 {
-  instance.brief = @"Test";
+  instance.brief = @"TestBrief";
   
-  STAssertEquals(instance.brief, @"Test", @"Cannot set a brief for a session");
+  STAssertEquals(instance.brief, @"TestBrief", @"Cannot set a brief for a session");
 }
 
 
