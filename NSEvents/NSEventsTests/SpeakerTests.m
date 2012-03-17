@@ -60,11 +60,11 @@ Speaker *instance;
   STAssertEquals(instance.bio, @"TestBio", @"Cannot set a bio for a speaker");
 }
 
-- (void)testHasAGravatarURL
+- (void)testCanGenerateGravatarURL
 {
   instance.email = @"anonymous@nscoder.org";
   
-  STAssertTrue([[instance.gravatarURL absoluteString] isEqualToString:@"http://www.gravatar.com/avatar/be61b488c391f8e496bfb214367039d7"], @"Cannot set a URL for a speaker");
+  STAssertTrue([[instance.gravatarURL absoluteString] isEqualToString:@"http://www.gravatar.com/avatar/be61b488c391f8e496bfb214367039d7"], @"Cannot generate gravatar URL for a speaker");
 }
 
 - (void)testCanMapParseObject
