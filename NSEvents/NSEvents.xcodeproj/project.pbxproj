@@ -23,6 +23,8 @@
 		651525D2151497FF0074FA19 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 651525D1151497FF0074FA19 /* Event.m */; };
 		651525D515149CB60074FA19 /* LocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 651525D415149CB60074FA19 /* LocationTests.m */; };
 		651525D815149D360074FA19 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 651525D715149D360074FA19 /* Location.m */; };
+		652C17AE1514BC18004BEF69 /* Sponsor.m in Sources */ = {isa = PBXBuildFile; fileRef = 652C17AD1514BC18004BEF69 /* Sponsor.m */; };
+		652C17B21514BC2E004BEF69 /* SponsorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 652C17B11514BC2E004BEF69 /* SponsorTests.m */; };
 		655A6B191514A0FC00A4B2B7 /* EventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 655A6B181514A0FC00A4B2B7 /* EventTableViewController.m */; };
 		6D0FAA181514A79F00B5B3FA /* TimeAndPlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0FAA171514A79F00B5B3FA /* TimeAndPlaceViewController.m */; };
 		6D0FAA1B1514A84900B5B3FA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0FAA1A1514A84900B5B3FA /* MapKit.framework */; };
@@ -89,6 +91,10 @@
 		651525D415149CB60074FA19 /* LocationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationTests.m; sourceTree = "<group>"; };
 		651525D615149D360074FA19 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		651525D715149D360074FA19 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		652C17AC1514BC18004BEF69 /* Sponsor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sponsor.h; sourceTree = "<group>"; };
+		652C17AD1514BC18004BEF69 /* Sponsor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sponsor.m; sourceTree = "<group>"; };
+		652C17B01514BC2E004BEF69 /* SponsorTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SponsorTests.h; sourceTree = "<group>"; };
+		652C17B11514BC2E004BEF69 /* SponsorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SponsorTests.m; sourceTree = "<group>"; };
 		655A6B171514A0FC00A4B2B7 /* EventTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableViewController.h; sourceTree = "<group>"; };
 		655A6B181514A0FC00A4B2B7 /* EventTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewController.m; sourceTree = "<group>"; };
 		6D0FAA161514A79F00B5B3FA /* TimeAndPlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeAndPlaceViewController.h; sourceTree = "<group>"; };
@@ -238,6 +244,8 @@
 				8A23B1EB1514AFE000AC8F1D /* SessionTest.m */,
 				8A23B1EC1514AFE000AC8F1D /* SpeakerTests.h */,
 				8A23B1ED1514AFE000AC8F1D /* SpeakerTests.m */,
+				652C17B01514BC2E004BEF69 /* SponsorTests.h */,
+				652C17B11514BC2E004BEF69 /* SponsorTests.m */,
 				651525BF151493BE0074FA19 /* Supporting Files */,
 			);
 			path = NSEventsTests;
@@ -263,6 +271,8 @@
 				651525D1151497FF0074FA19 /* Event.m */,
 				651525D615149D360074FA19 /* Location.h */,
 				651525D715149D360074FA19 /* Location.m */,
+				652C17AC1514BC18004BEF69 /* Sponsor.h */,
+				652C17AD1514BC18004BEF69 /* Sponsor.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -411,6 +421,8 @@
 				8A23B1E81514AFC400AC8F1D /* Speaker.m in Sources */,
 				8A23B1EE1514AFE000AC8F1D /* SessionTest.m in Sources */,
 				8A23B1EF1514AFE000AC8F1D /* SpeakerTests.m in Sources */,
+				652C17AE1514BC18004BEF69 /* Sponsor.m in Sources */,
+				652C17B21514BC2E004BEF69 /* SponsorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
