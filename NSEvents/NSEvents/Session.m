@@ -16,6 +16,11 @@
 
 @synthesize title;
 @synthesize internalSpeakers;
+@synthesize startDate;
+@synthesize endDate;
+@synthesize room;
+@synthesize track;
+@synthesize brief;
 
 -(NSArray*) speakers {
   return internalSpeakers;
