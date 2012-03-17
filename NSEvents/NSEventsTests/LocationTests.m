@@ -2,63 +2,58 @@
 
 @implementation LocationTests
 
+Location *instance;
+
 - (void)setUp
 {
   [super setUp];
+  
+  instance = [[Location alloc] init];
 }
 
 - (void)tearDown
 {
+  instance = nil;
+  
   [super tearDown];
 }
 
-- (void)testLocationHasATitle
+- (void)testCanCreateIntanceOfLocation
+{  
+  STAssertNotNil(instance, @"Cannot create instance of Event");
+}
+
+
+- (void)tesHasATitle
 {
-  Location *instance = [[Location alloc] init];
-  
   instance.title = @"Test";
   
   STAssertEquals(instance.title, @"Test", @"Cannot set a title for an event");
 }
 
-- (void)testLocationHasAnAddress
+- (void)testHasAnAddress
 {
-  Location *instance = [[Location alloc] init];
-  
   instance.address = @"Test";
   
   STAssertEquals(instance.address, @"Test", @"Cannot set an address for a location");
 }
 
-- (void)testLocationHasACity
+- (void)testHasACity
 {
-  Location *instance = [[Location alloc] init];
-  
   instance.city = @"Test";
   
   STAssertEquals(instance.city, @"Test", @"Cannot set a city for a location");
 }
 
-- (void)testLocationHasACountry
+- (void)testHasACountry
 {
-  Location *instance = [[Location alloc] init];
-  
   instance.country = @"Test";
   
   STAssertEquals(instance.country, @"Test", @"Cannot set a country for a location");
 }
 
-- (void)testCanCreateIntanceOfLocation
-{
-  Location *instance = [[Location alloc] init];
-  
-  STAssertNotNil(instance, @"Cannot create instance of Event");
-}
-
 - (void)testLocationHasLongitude
 {
-  Location *instance = [[Location alloc] init];
-  
   instance.longitud = 1.0f;
   
   STAssertEquals(instance.longitud, 1.0f, @"Cannot set longitude for a location");
@@ -66,8 +61,6 @@
 
 - (void)testLocationHasLatidud
 {
-  Location *instance = [[Location alloc] init];
-  
   instance.latitud = 1.0f;
   
   STAssertEquals(instance.latitud, 1.0f, @"Cannot set latidud for a location");
