@@ -12,11 +12,13 @@
 @interface EventTableViewController ()
 
 @property (nonatomic, strong) NSMutableArray *events;
+@property (nonatomic, strong) UIActivityIndicatorView *activity;
 
 @end
 
 @implementation EventTableViewController
 @synthesize events;
+@synthesize activity;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -48,6 +50,10 @@
   
   // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
   // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+  self.activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.activity];
+  //[self.activity startAnimating];
+
 }
 
 - (void)viewDidUnload
