@@ -3,7 +3,7 @@
 @protocol ParseActiveRecordProtocol <NSObject>
 
 - (void)mapParserObject:(PFObject*)parserObject;
-- (id) loadById;
-- (NSArray*) loadAll;
+- (id) findById:(NSString*)objectId;
+- (NSArray*) findAll;
 
 @end
