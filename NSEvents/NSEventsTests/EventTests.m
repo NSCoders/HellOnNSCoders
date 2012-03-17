@@ -179,4 +179,38 @@ Event *instance;
     STAssertTrue(result != nil, @"Could not find event in parse");
 }
 
+- (void)testCanLazyLoadLocation
+{
+    NSDateFormatter *dateFormater = [[NSDateFormatter alloc] init];
+    [dateFormater setDateFormat:@"dd/mm/yyyy"];
+    
+    NSDate *start_date = [dateFormater dateFromString:@"01/01/2012"];
+    NSDate *end_date = [dateFormater dateFromString:@"02/01/2012"];
+    
+    PFObject *objectEvent = [PFObject objectWithClassName:@"Event"];
+    [objectEvent setObject:@"Test Title" forKey:@"title"];
+    [objectEvent setObject:end_date forKey:@"endDate"];
+    [objectEvent setObject:start_date forKey:@"startDate"];
+    [objectEvent setObject:@"#testhashtag" forKey:@"hashtag"];
+    [objectEvent save];
+    
+    PFObject *objectLocation = [PFObject objectWithClassName:@"Location"];
+    [objectLocation setObject:@"Test Title" forKey:@"title"];
+    [objectLocation setObject:[NSNumber numberWithFloat:1.0f] forKey:@"longitud"];
+    [objectLocation setObject:[NSNumber numberWithFloat:1.0f] forKey:@"latitud"];
+    [objectLocation setObject:@"street name, 1" forKey:@"address"];
+    [objectLocation setObject:@"city name" forKey:@"city"];
+    [objectLocation setObject:@"country name" forKey:@"country"];
+    [objectLocation setObject:objectEvent.objectId forKey:@"eventId"];
+    [objectLocation save];
+    
+    Event *eventFromParse = [Event findById:objectEvent.objectId];
+    Location *locationFromParse = eventFromParse.location; //Lazzy load location from parse
+    
+    [objectEvent delete];
+    [objectLocation delete];
+    
+    STAssertTrue(locationFromParse != nil, @"Could not map location from parse object");
+}
+
 @end

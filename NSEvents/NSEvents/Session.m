@@ -13,7 +13,6 @@
 @synthesize room;
 @synthesize track;
 @synthesize brief;
-@synthesize objectId;
 @synthesize eventId;
 
 -(NSArray*) speakers {

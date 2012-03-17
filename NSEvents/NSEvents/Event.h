@@ -5,7 +5,6 @@
 
 @interface Event : ParseActiveRecord
 
-@property (copy)    NSString*   objectId;
 @property (copy)    NSString*   title;
 @property (strong)  NSDate*     startDate;
 @property (strong)  NSDate*     endDate;

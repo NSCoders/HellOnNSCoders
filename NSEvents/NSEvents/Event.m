@@ -8,12 +8,11 @@
 
 @implementation Event
 
-@synthesize objectId;
 @synthesize title;
 @synthesize startDate;
 @synthesize endDate;
 @synthesize hashtag;
-@synthesize location;
+@synthesize location = _location;
 @synthesize internalSessions;
 
 -(NSArray*) sessions 
@@ -29,6 +28,21 @@
     }
     
     [internalSessions addObject:session];
+}
+
+- (Location*)location
+{
+    if(_location == nil)
+    {
+        return [Location findByEventObjectId:self.objectId];
+    }
+    
+    return _location;
+}
+
+- (void) setLocation:(Location*)location
+{
+    _location = location;
 }
 
 + (NSArray*) findAll

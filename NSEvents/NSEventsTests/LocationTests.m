@@ -74,6 +74,7 @@ Location *instance;
     [object setObject:@"street name, 1" forKey:@"address"];
     [object setObject:@"city name" forKey:@"city"];
     [object setObject:@"country name" forKey:@"country"];
+    [object setObject:@"eventId" forKey:@"eventId"];
     [object save];
     
     PFQuery *query = [PFQuery queryWithClassName:@"Location"];
@@ -92,6 +93,25 @@ Location *instance;
     [objectFromParser delete];
     
     STAssertTrue(assert_entity_mapping, @"Could not map location from parse object");
+}
+
+- (void)testCanfindByEventObjectId
+{
+    PFObject *object = [PFObject objectWithClassName:@"Location"];
+    [object setObject:@"Test Title" forKey:@"title"];
+    [object setObject:[NSNumber numberWithFloat:1.0f] forKey:@"longitud"];
+    [object setObject:[NSNumber numberWithFloat:1.0f] forKey:@"latitud"];
+    [object setObject:@"street name, 1" forKey:@"address"];
+    [object setObject:@"city name" forKey:@"city"];
+    [object setObject:@"country name" forKey:@"country"];
+    [object setObject:@"eventId" forKey:@"eventId"];
+    [object save];
+    
+    Location *result = [Location findByEventObjectId:@"eventId"];
+    
+    [object delete];
+    
+    STAssertTrue(result != nil, @"Could not map location from parse object");
 }
 
 @end

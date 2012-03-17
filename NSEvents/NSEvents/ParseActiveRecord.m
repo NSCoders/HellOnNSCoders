@@ -2,6 +2,8 @@
 
 @implementation ParseActiveRecord
 
+@synthesize objectId;
+
 - (void)mapParserObject:(PFObject*)parserObject
 {
     // Map parse objects by convention
@@ -11,6 +13,8 @@
     {
         [self setValue:[parserObject objectForKey:key] forKey:key];
     }
+    
+    self.objectId = parserObject.objectId;
 }
 
 + (id) findById:(NSString*)objectId
