@@ -74,6 +74,8 @@
 		8A23B2151514BEF400AC8F1D /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B2131514BEEF00AC8F1D /* Twitter.framework */; };
 		8A23B2251514D94F00AC8F1D /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A23B2241514D94F00AC8F1D /* AboutViewController.m */; };
 		8A23B2281514DA5C00AC8F1D /* SponsorsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A23B2271514DA5C00AC8F1D /* SponsorsTableViewController.m */; };
+		8AA9CC731514F0EA00F13C0D /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A23B21B1514D76C00AC8F1D /* background.png */; };
+		8AA9CC741514F0EA00F13C0D /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A23B21C1514D76C00AC8F1D /* background@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -474,6 +476,8 @@
 				8A1E713C1514DBDA00210D7B /* sponsor@2x.png in Resources */,
 				8A1E713D1514DBDA00210D7B /* sponsoract.png in Resources */,
 				8A1E713E1514DBDA00210D7B /* sponsoract@2x.png in Resources */,
+				8AA9CC731514F0EA00F13C0D /* background.png in Resources */,
+				8AA9CC741514F0EA00F13C0D /* background@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
