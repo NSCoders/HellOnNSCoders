@@ -21,7 +21,6 @@ Event *instance;
 - (void)testCanCreateIntanceOfEvent
 {
   STAssertNotNil(instance, @"Cannot create instance of Event");
-  
 }
 
 - (void)testHasAnIdentifier
@@ -82,7 +81,6 @@ Event *instance;
   
   STAssertTrue([instance.sessions count] == 1, @"Test", @"Cannot add a session for an event");
 }
-
 
 
 @end
