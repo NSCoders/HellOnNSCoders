@@ -7,6 +7,7 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
+#import "Session.h"
 
 @interface SessionTest : SenTestCase
 

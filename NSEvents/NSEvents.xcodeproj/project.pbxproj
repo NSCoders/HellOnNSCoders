@@ -24,6 +24,10 @@
 		651525D515149CB60074FA19 /* LocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 651525D415149CB60074FA19 /* LocationTests.m */; };
 		651525D815149D360074FA19 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 651525D715149D360074FA19 /* Location.m */; };
 		655A6B191514A0FC00A4B2B7 /* EventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 655A6B181514A0FC00A4B2B7 /* EventTableViewController.m */; };
+		655A6B1D1514A54B00A4B2B7 /* SpeakerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 655A6B1C1514A54B00A4B2B7 /* SpeakerTests.m */; };
+		655A6B201514A5B500A4B2B7 /* Speaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 655A6B1F1514A5B500A4B2B7 /* Speaker.m */; };
+		655A6B231514A8F100A4B2B7 /* SessionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 655A6B221514A8F100A4B2B7 /* SessionTest.m */; };
+		655A6B261514A96300A4B2B7 /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 655A6B251514A96300A4B2B7 /* Session.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +68,14 @@
 		651525D715149D360074FA19 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		655A6B171514A0FC00A4B2B7 /* EventTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableViewController.h; sourceTree = "<group>"; };
 		655A6B181514A0FC00A4B2B7 /* EventTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewController.m; sourceTree = "<group>"; };
+		655A6B1B1514A54B00A4B2B7 /* SpeakerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakerTests.h; sourceTree = "<group>"; };
+		655A6B1C1514A54B00A4B2B7 /* SpeakerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakerTests.m; sourceTree = "<group>"; };
+		655A6B1E1514A5B500A4B2B7 /* Speaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Speaker.h; sourceTree = "<group>"; };
+		655A6B1F1514A5B500A4B2B7 /* Speaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Speaker.m; sourceTree = "<group>"; };
+		655A6B211514A8F100A4B2B7 /* SessionTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionTest.h; sourceTree = "<group>"; };
+		655A6B221514A8F100A4B2B7 /* SessionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionTest.m; sourceTree = "<group>"; };
+		655A6B241514A96300A4B2B7 /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Session.h; sourceTree = "<group>"; };
+		655A6B251514A96300A4B2B7 /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Session.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +165,11 @@
 				651525C5151493BE0074FA19 /* EventTests.m */,
 				651525D315149CB60074FA19 /* LocationTests.h */,
 				651525D415149CB60074FA19 /* LocationTests.m */,
+				655A6B1B1514A54B00A4B2B7 /* SpeakerTests.h */,
+				655A6B1C1514A54B00A4B2B7 /* SpeakerTests.m */,
 				651525BF151493BE0074FA19 /* Supporting Files */,
+				655A6B211514A8F100A4B2B7 /* SessionTest.h */,
+				655A6B221514A8F100A4B2B7 /* SessionTest.m */,
 			);
 			path = NSEventsTests;
 			sourceTree = "<group>";
@@ -174,6 +190,10 @@
 				651525D1151497FF0074FA19 /* Event.m */,
 				651525D615149D360074FA19 /* Location.h */,
 				651525D715149D360074FA19 /* Location.m */,
+				655A6B1E1514A5B500A4B2B7 /* Speaker.h */,
+				655A6B1F1514A5B500A4B2B7 /* Speaker.m */,
+				655A6B241514A96300A4B2B7 /* Session.h */,
+				655A6B251514A96300A4B2B7 /* Session.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -300,6 +320,8 @@
 				651525D2151497FF0074FA19 /* Event.m in Sources */,
 				651525D815149D360074FA19 /* Location.m in Sources */,
 				655A6B191514A0FC00A4B2B7 /* EventTableViewController.m in Sources */,
+				655A6B201514A5B500A4B2B7 /* Speaker.m in Sources */,
+				655A6B261514A96300A4B2B7 /* Session.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +331,8 @@
 			files = (
 				651525C6151493BE0074FA19 /* EventTests.m in Sources */,
 				651525D515149CB60074FA19 /* LocationTests.m in Sources */,
+				655A6B1D1514A54B00A4B2B7 /* SpeakerTests.m in Sources */,
+				655A6B231514A8F100A4B2B7 /* SessionTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

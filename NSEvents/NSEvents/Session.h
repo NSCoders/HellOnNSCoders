@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Speaker.h"
 
 @interface Session : NSObject
+
+@property (copy) NSString *title;
+@property (readonly) NSArray *speakers;
+
+-(void) addSpeaker:(Speaker*)speaker;
+
 
 @end

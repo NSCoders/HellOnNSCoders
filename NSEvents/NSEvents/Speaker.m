@@ -1,13 +1,13 @@
-//
-//  Speaker.m
-//  NSEvents
-//
-//  Created by Rubén Bernal Verneda on 17/03/12.
-//  Copyright (c) 2012 Atípic software. All rights reserved.
-//
-
 #import "Speaker.h"
 
 @implementation Speaker
+
+@synthesize firstName;
+@synthesize lastName;
+@synthesize email;
+@synthesize twitter;
+@synthesize bio;
+@synthesize gravatarURL;
+@synthesize phoneNumber;
 
 @end
