@@ -25,9 +25,9 @@ Event *instance;
 
 - (void)testHasAnIdentifier
 {
-  instance.identifier = 1;
+  instance.identifier = @"Identifier";
   
-  STAssertEquals(instance.identifier, 1, @"Cannot set an identifier for an event");
+  STAssertEquals(instance.identifier, @"Identifier", @"Cannot set an identifier for an event");
 }
 
 - (void)testHasATitle

@@ -12,10 +12,10 @@
 
 @interface Event : NSObject
 
+@property (copy)    NSString*   identifier;
 @property (copy)    NSString*   title;
 @property (strong)  NSDate*     startDate;
 @property (strong)  NSDate*     endDate;
-@property (assign)  int         identifier;
 @property (copy)    NSString*   hashtag;
 @property (strong)  Location*   location;
 @property (readonly)  NSArray*    sessions;
