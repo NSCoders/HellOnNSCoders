@@ -38,7 +38,7 @@
   [super viewDidLoad];
   
   TWRequest *twitterRequest = [[TWRequest alloc] initWithURL:
-                               [NSURL URLWithString:@"http://search.twitter.com/search.json?q=%23nscoders_bcn"] 
+                               [NSURL URLWithString:@"http://search.twitter.com/search.json?q=%23nscoders_es"] 
                       parameters:[NSDictionary dictionary]
                    requestMethod:TWRequestMethodGET];
   [twitterRequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
