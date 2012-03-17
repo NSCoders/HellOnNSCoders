@@ -6,5 +6,7 @@
 @synthesize title;
 @synthesize startDate;
 @synthesize endDate;
+@synthesize hashtag;
+@synthesize location;
 
 @end

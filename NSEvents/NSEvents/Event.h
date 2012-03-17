@@ -7,12 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Location.h"
 
 @interface Event : NSObject
 
-@property (strong)  NSString*   title;
+@property (copy)    NSString*   title;
 @property (strong)  NSDate*     startDate;
 @property (strong)  NSDate*     endDate;
 @property (assign)  int         identifier;
+@property (copy)    NSString*   hashtag;
+@property (strong)  Location*   location;
 
 @end
