@@ -15,6 +15,7 @@
 
 @implementation TimeAndPlaceViewController
 @synthesize mapView,eventSelected,locationPoint;
+@synthesize lblTitle,lblEndDate,lblHashtag,lblStartDate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -52,7 +53,15 @@
     region.center = locationPoint.coordinate;
     [mapView setRegion:region animated:TRUE];
     
+    //rellenamos datos en labels superiores
     
+    NSDateFormatter *start=[[NSDateFormatter alloc]init];
+    NSDateFormatter *end =[[NSDateFormatter alloc]init];
+    
+    lblTitle.text=eventSelected.title;
+    lblStartDate.text=[start stringFromDate:eventSelected.startDate];
+    lblEndDate.text=[end stringFromDate:eventSelected.startDate];
+    lblHashtag.text= eventSelected.hashtag;
     
 	// Do any additional setup after loading the view.
 }

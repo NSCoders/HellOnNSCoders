@@ -16,4 +16,10 @@
 @property (nonatomic, strong) Event *eventSelected;
 @property (nonatomic, strong) LocationPoint *locationPoint;
 
+@property (nonatomic,strong) IBOutlet UILabel *lblTitle;
+@property (nonatomic,strong) IBOutlet UILabel *lblStartDate;
+@property (nonatomic,strong) IBOutlet UILabel *lblEndDate;
+@property (nonatomic,strong) IBOutlet UILabel *lblHashtag;
+
+
 @end
