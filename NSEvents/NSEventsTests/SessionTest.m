@@ -116,9 +116,9 @@ Session *instance;
     && [mappedSession.brief isEqualToString:@"brief"]
     && [mappedSession.track isEqualToString:@"track"];
     
-    STAssertTrue(assert_entity_mapping, @"Could not map sessions from parse object");
-    
     [object delete];
+    
+    STAssertTrue(assert_entity_mapping, @"Could not map sessions from parse object");
 }
 
 @end

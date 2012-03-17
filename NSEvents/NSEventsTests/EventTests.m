@@ -108,9 +108,75 @@ Event *instance;
     && [mapedObject.endDate isEqualToDate:end_date]
     && [mapedObject.hashtag isEqualToString:@"#testhashtag"];
     
-    STAssertTrue(assert_entity_mapping, @"Could not map events from parse object");
-    
     [eventFromParser delete];
+    
+    STAssertTrue(assert_entity_mapping, @"Could not map events from parse object");
+}
+
+- (void)testCanFindAll
+{
+    NSDateFormatter *dateFormater = [[NSDateFormatter alloc] init];
+    [dateFormater setDateFormat:@"dd/mm/yyyy"];
+    
+    NSDate *start_date = [dateFormater dateFromString:@"01/01/2012"];
+    NSDate *end_date = [dateFormater dateFromString:@"02/01/2012"];
+    
+    PFObject *object = [PFObject objectWithClassName:@"Event"];
+    [object setObject:@"Test Title" forKey:@"title"];
+    [object setObject:end_date forKey:@"endDate"];
+    [object setObject:start_date forKey:@"startDate"];
+    [object setObject:@"#testhashtag" forKey:@"hashtag"];
+    [object save];
+    
+    NSArray *result = [Event findAll];
+    
+    [object delete];
+    
+    STAssertTrue([result count] > 0, @"Could not find events in parse");
+}
+
+- (void)testCanFindFirst
+{
+    NSDateFormatter *dateFormater = [[NSDateFormatter alloc] init];
+    [dateFormater setDateFormat:@"dd/mm/yyyy"];
+    
+    NSDate *start_date = [dateFormater dateFromString:@"01/01/2012"];
+    NSDate *end_date = [dateFormater dateFromString:@"02/01/2012"];
+    
+    PFObject *object = [PFObject objectWithClassName:@"Event"];
+    [object setObject:@"Test Title" forKey:@"title"];
+    [object setObject:end_date forKey:@"endDate"];
+    [object setObject:start_date forKey:@"startDate"];
+    [object setObject:@"#testhashtag" forKey:@"hashtag"];
+    [object save];
+    
+    Event*result = [Event findFirst];
+    
+    [object delete];
+    
+    STAssertTrue(result != nil, @"Could not find event in parse");
+}
+
+- (void)testCanFindById
+{
+    NSDateFormatter *dateFormater = [[NSDateFormatter alloc] init];
+    [dateFormater setDateFormat:@"dd/mm/yyyy"];
+    
+    NSDate *start_date = [dateFormater dateFromString:@"01/01/2012"];
+    NSDate *end_date = [dateFormater dateFromString:@"02/01/2012"];
+    
+    PFObject *object = [PFObject objectWithClassName:@"Event"];
+    [object setObject:@"Test Title" forKey:@"title"];
+    [object setObject:end_date forKey:@"endDate"];
+    [object setObject:start_date forKey:@"startDate"];
+    [object setObject:@"#testhashtag" forKey:@"hashtag"];
+    [object save];
+    
+    Event*result = [Event findById:object.objectId];
+    
+    [object delete];
+    
+    STAssertTrue(result != nil, @"Could not find event in parse");
 }
 
 @end

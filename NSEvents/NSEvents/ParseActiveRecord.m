@@ -13,12 +13,17 @@
     }
 }
 
-- (id) findById:(NSString*)objectId
++ (id) findById:(NSString*)objectId
 {
     @throw  @"Not implemented on base class";
 }
 
-- (NSArray*) findAll
++ (NSArray*) findAll
+{
+    @throw  @"Not implemented on base class";
+}
+
++ (id) findFirst
 {
     @throw  @"Not implemented on base class";
 }

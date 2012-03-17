@@ -103,9 +103,9 @@ Sponsor *instance;
     && [mapedObject.webURL isEqualToString:@"http://www.nscoders.org"]
     && [mapedObject.phoneNumber isEqualToString:@"555555555"];
 
-    STAssertTrue(assert_entity_mapping, @"Could not map sponsor from parse object");
-    
     [objectFromParser delete];
+    
+    STAssertTrue(assert_entity_mapping, @"Could not map sponsor from parse object");
 }
 
 @end

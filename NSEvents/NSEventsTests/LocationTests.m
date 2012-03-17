@@ -89,9 +89,9 @@ Location *instance;
     && [mapedObject.city isEqualToString:@"city name"]
     && [mapedObject.country isEqualToString:@"country name"];
     
-    STAssertTrue(assert_entity_mapping, @"Could not map location from parse object");
-    
     [objectFromParser delete];
+    
+    STAssertTrue(assert_entity_mapping, @"Could not map location from parse object");
 }
 
 @end

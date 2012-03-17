@@ -92,9 +92,9 @@ Speaker *instance;
     && [mapedObject.bio isEqualToString:@"Bio"]
     && [mapedObject.phoneNumber isEqualToString:@"555555555"];
     
-    STAssertTrue(assert_entity_mapping, @"Could not map speaker from parse object");
-    
     [objectFromParser delete];
+    
+    STAssertTrue(assert_entity_mapping, @"Could not map speaker from parse object");
 }
 
 @end
