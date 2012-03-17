@@ -26,7 +26,7 @@
   PFQuery *query = [PFQuery queryWithClassName:@"Session"];
   PFObject *fromParser = [query getObjectWithId:object.objectId];
   
-  SessionParseMapperTests *mapper = [[SessionParseMapperTests alloc] initWith:fromParser];
+  SessionParseMapper *mapper = [[SessionParseMapper alloc] initWith:fromParser];
   
   BOOL assert_entity_mapping = [mapper.title isEqualToString:@"Test Title"]
   && [mapper.startDate isEqualToDate:start_date]
@@ -35,9 +35,9 @@
   && [mapper.brief isEqualToString:@"brief"]
   && [mapper.track isEqualToString:@"track"];
   
-  STAssertTrue(assert_entity_mapping, @"Could not retrieve events from parse");
+  STAssertTrue(assert_entity_mapping, @"Could not map sessions from parse object");
   
-  [eventFromParser delete];
+  [object delete];
 }
 
 @end

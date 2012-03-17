@@ -27,7 +27,7 @@
   && [mapper.endDate isEqualToDate:end_date]
   && [mapper.hashtag isEqualToString:@"#testhashtag"];
   
-  STAssertTrue(assert_entity_mapping, @"Could not retrieve events from parse");
+  STAssertTrue(assert_entity_mapping, @"Could not maps events from parse object");
   
   [eventFromParser delete];
 }

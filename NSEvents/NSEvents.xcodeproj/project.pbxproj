@@ -318,6 +318,8 @@
 				651525C5151493BE0074FA19 /* EventTests.m */,
 				651525D315149CB60074FA19 /* LocationTests.h */,
 				651525D415149CB60074FA19 /* LocationTests.m */,
+				65AB721D1514F97100B98F80 /* SessionParseMapperTests.h */,
+				65AB721E1514F97100B98F80 /* SessionParseMapperTests.m */,
 				8A23B1EA1514AFE000AC8F1D /* SessionTest.h */,
 				8A23B1EB1514AFE000AC8F1D /* SessionTest.m */,
 				8A23B1EC1514AFE000AC8F1D /* SpeakerTests.h */,
@@ -325,8 +327,6 @@
 				652C17B01514BC2E004BEF69 /* SponsorTests.h */,
 				652C17B11514BC2E004BEF69 /* SponsorTests.m */,
 				651525BF151493BE0074FA19 /* Supporting Files */,
-				65AB721D1514F97100B98F80 /* SessionParseMapperTests.h */,
-				65AB721E1514F97100B98F80 /* SessionParseMapperTests.m */,
 			);
 			path = NSEventsTests;
 			sourceTree = "<group>";
