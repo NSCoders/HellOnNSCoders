@@ -8,6 +8,7 @@
 
 #import "EventDetailTableViewController.h"
 #import "Event.h"
+#import "TimeAndPlaceViewController.h"
 
 @interface EventDetailTableViewController ()
 
@@ -15,6 +16,7 @@
 
 @implementation EventDetailTableViewController
 @synthesize event;
+@synthesize eventTitleCell;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -28,8 +30,7 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  NSLog(@"Event: %@", [event title]);
-  
+  self.eventTitleCell.textLabel.text = event.title;
   // Uncomment the following line to preserve selection between presentations.
   // self.clearsSelectionOnViewWillAppear = NO;
   
@@ -39,6 +40,7 @@
 
 - (void)viewDidUnload
 {
+  [self setEventTitleCell:nil];
   [super viewDidUnload];
   // Release any retained subviews of the main view.
   // e.g. self.myOutlet = nil;
@@ -124,5 +126,17 @@
    [self.navigationController pushViewController:detailViewController animated:YES];
    */
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    id destinationVC=segue.destinationViewController;
+    
+    if ([destinationVC isKindOfClass:[TimeAndPlaceViewController class]]) {
+        TimeAndPlaceViewController *timeAndPlace=(TimeAndPlaceViewController*)destinationVC;
+        timeAndPlace.eventSelected=self.event;
+    }
+    
+}
+
 
 @end

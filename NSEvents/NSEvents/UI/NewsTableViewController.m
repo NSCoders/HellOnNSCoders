@@ -11,10 +11,12 @@
 
 @interface NewsTableViewController ()
 @property (nonatomic, strong) NSArray *twitterResponse;
+@property (nonatomic, strong) UIActivityIndicatorView *activity;
 @end
 
 @implementation NewsTableViewController
 @synthesize twitterResponse;
+@synthesize activity;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -24,6 +26,12 @@
   }
   return self;
 }
+
+-(void)viewWillAppear:(BOOL)animated
+{
+  [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
 
 - (void)viewDidLoad
 {
@@ -57,6 +65,7 @@
       }
       
       [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:NULL waitUntilDone:NO];
+      [self.activity  performSelectorOnMainThread:@selector(stopAnimating) withObject:NULL waitUntilDone:NO];
     }
   }];
   
@@ -64,7 +73,9 @@
   // self.clearsSelectionOnViewWillAppear = NO;
   
   // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-  // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+  self.activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.activity];
+  [self.activity startAnimating];
 }
 
 - (void)viewDidUnload

@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Event.h"
+#import "LocationPoint.h"
 
 @interface TimeAndPlaceViewController : UIViewController <MKMapViewDelegate>
 
 @property (nonatomic, strong) IBOutlet MKMapView *mapView;
+@property (nonatomic, strong) Event *eventSelected;
+@property (nonatomic, strong) LocationPoint *locationPoint;
 
 @end
