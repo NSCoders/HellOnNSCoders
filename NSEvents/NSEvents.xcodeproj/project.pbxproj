@@ -48,6 +48,9 @@
 		8A23B2061514B07000AC8F1D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1F51514B02200AC8F1D /* CFNetwork.framework */; };
 		8A23B2071514B07000AC8F1D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1F31514B01B00AC8F1D /* AudioToolbox.framework */; };
 		8A23B20A1514B8EC00AC8F1D /* EventDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A23B2091514B8EC00AC8F1D /* EventDetailTableViewController.m */; };
+		8A23B2111514BD5900AC8F1D /* NewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A23B2101514BD5900AC8F1D /* NewsTableViewController.m */; };
+		8A23B2141514BEEF00AC8F1D /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B2131514BEEF00AC8F1D /* Twitter.framework */; };
+		8A23B2151514BEF400AC8F1D /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B2131514BEEF00AC8F1D /* Twitter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +112,9 @@
 		8A23B1FD1514B05600AC8F1D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8A23B2081514B8EC00AC8F1D /* EventDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailTableViewController.h; sourceTree = "<group>"; };
 		8A23B2091514B8EC00AC8F1D /* EventDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailTableViewController.m; sourceTree = "<group>"; };
+		8A23B20F1514BD5900AC8F1D /* NewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewController.h; sourceTree = "<group>"; };
+		8A23B2101514BD5900AC8F1D /* NewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewController.m; sourceTree = "<group>"; };
+		8A23B2131514BEEF00AC8F1D /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A23B2141514BEEF00AC8F1D /* Twitter.framework in Frameworks */,
 				6D0FAA241514AABD00B5B3FA /* MapKit.framework in Frameworks */,
 				6515259B151493BD0074FA19 /* UIKit.framework in Frameworks */,
 				6515259D151493BD0074FA19 /* Foundation.framework in Frameworks */,
@@ -147,6 +154,7 @@
 				651525BA151493BE0074FA19 /* UIKit.framework in Frameworks */,
 				651525BB151493BE0074FA19 /* Foundation.framework in Frameworks */,
 				8A23B1F11514B00D00AC8F1D /* Parse.framework in Frameworks */,
+				8A23B2151514BEF400AC8F1D /* Twitter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +183,7 @@
 		65152599151493BD0074FA19 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8A23B2131514BEEF00AC8F1D /* Twitter.framework */,
 				8A23B1FB1514B05600AC8F1D /* MobileCoreServices.framework */,
 				8A23B1FC1514B05600AC8F1D /* QuartzCore.framework */,
 				8A23B1FD1514B05600AC8F1D /* SystemConfiguration.framework */,
@@ -267,6 +276,8 @@
 				6D0FAA171514A79F00B5B3FA /* TimeAndPlaceViewController.m */,
 				8A23B2081514B8EC00AC8F1D /* EventDetailTableViewController.h */,
 				8A23B2091514B8EC00AC8F1D /* EventDetailTableViewController.m */,
+				8A23B20F1514BD5900AC8F1D /* NewsTableViewController.h */,
+				8A23B2101514BD5900AC8F1D /* NewsTableViewController.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -386,6 +397,7 @@
 				655A6B191514A0FC00A4B2B7 /* EventTableViewController.m in Sources */,
 				6D0FAA181514A79F00B5B3FA /* TimeAndPlaceViewController.m in Sources */,
 				8A23B20A1514B8EC00AC8F1D /* EventDetailTableViewController.m in Sources */,
+				8A23B2111514BD5900AC8F1D /* NewsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
