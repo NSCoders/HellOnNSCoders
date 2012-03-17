@@ -21,6 +21,8 @@
 @synthesize room;
 @synthesize track;
 @synthesize brief;
+@synthesize sessionId;
+@synthesize eventId;
 
 -(NSArray*) speakers {
   return internalSpeakers;

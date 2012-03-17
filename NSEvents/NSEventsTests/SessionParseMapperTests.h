@@ -11,6 +11,6 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-@interface SessionParseMapper : SenTestCase
+@interface SessionParseMapperTests : SenTestCase
 
 @end

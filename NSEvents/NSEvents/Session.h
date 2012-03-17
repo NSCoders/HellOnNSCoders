@@ -18,6 +18,8 @@
 @property (copy) NSString*      room;
 @property (copy) NSString*      track;
 @property (copy) NSString*      brief;
+@property (copy) NSString*      sessionId;
+@property (copy) NSString*      eventId;
 
 
 -(void) addSpeaker:(Speaker*)speaker;
