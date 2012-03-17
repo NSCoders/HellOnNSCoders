@@ -8,12 +8,13 @@
 
 #import "TimeAndPlaceViewController.h"
 
+
 @interface TimeAndPlaceViewController ()
 
 @end
 
 @implementation TimeAndPlaceViewController
-@synthesize mapView;
+@synthesize mapView,eventSelected,locationPoint;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +28,32 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"Evento %@",eventSelected.title);
+    
+    eventSelected.location=[[Location alloc]init];
+    
+    
+    eventSelected.location.title = eventSelected.title;
+    eventSelected.location.address = @"Direccion";
+    eventSelected.location.city = @"Ciudad";
+    eventSelected.location.country = @"Country";
+    eventSelected.location.latitud = 41.408943;
+    eventSelected.location.longitud = 2.126601;
+    
+    locationPoint= [[LocationPoint alloc]initWithTitle:eventSelected.location.title address:eventSelected.location.address city:eventSelected.location.city latitud:eventSelected.location.latitud longitud:eventSelected.location.longitud];
+    
+    [mapView addAnnotation:locationPoint];
+   
+    MKCoordinateSpan span=MKCoordinateSpanMake(9, 9);
+
+    MKCoordinateRegion region;
+
+    region.span = span;
+    region.center = locationPoint.coordinate;
+    [mapView setRegion:region animated:TRUE];
+    
+    
+    
 	// Do any additional setup after loading the view.
 }
 
@@ -40,5 +67,18 @@
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
+-(void)selectPoint{
+    //selecciona el punto del evento y muestra algun detalle
+    [self.mapView selectAnnotation:locationPoint animated:TRUE];
+}
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id < MKAnnotation >)annotation{
+    [self performSelector:@selector(selectPoint) withObject:nil afterDelay:0.3];
+    
+    return nil;
+}
+
+
 
 @end

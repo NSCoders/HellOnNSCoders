@@ -8,6 +8,7 @@
 
 #import "EventDetailTableViewController.h"
 #import "Event.h"
+#import "TimeAndPlaceViewController.h"
 
 @interface EventDetailTableViewController ()
 
@@ -125,5 +126,17 @@
    [self.navigationController pushViewController:detailViewController animated:YES];
    */
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    id destinationVC=segue.destinationViewController;
+    
+    if ([destinationVC isKindOfClass:[TimeAndPlaceViewController class]]) {
+        TimeAndPlaceViewController *timeAndPlace=(TimeAndPlaceViewController*)destinationVC;
+        timeAndPlace.eventSelected=self.event;
+    }
+    
+}
+
 
 @end
