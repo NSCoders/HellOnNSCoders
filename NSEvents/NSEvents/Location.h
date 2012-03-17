@@ -2,8 +2,9 @@
 
 @interface Location : ParseActiveRecord
 
-@property (assign)  float     longitud;
-@property (assign)  float     latitud;
+@property (copy)    NSString  *objectId;
+@property (strong)  NSNumber  *longitud;
+@property (strong)  NSNumber  *latitud;
 @property (copy)    NSString  *title;
 @property (copy)    NSString  *address;
 @property (copy)    NSString  *city;

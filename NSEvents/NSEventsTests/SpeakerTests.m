@@ -67,4 +67,34 @@ Speaker *instance;
   STAssertTrue([[instance.gravatarURL absoluteString] isEqualToString:@"http://www.gravatar.com/avatar/be61b488c391f8e496bfb214367039d7"], @"Cannot set a URL for a speaker");
 }
 
+- (void)testCanMapParseObject
+{
+    PFObject *object = [PFObject objectWithClassName:@"Speaker"];
+    [object setObject:@"FirstName" forKey:@"firstName"];
+    [object setObject:@"LastName" forKey:@"lastName"];
+    [object setObject:@"email@nscoders.org" forKey:@"email"];
+    [object setObject:@"@anonymous" forKey:@"twitter"];
+    [object setObject:@"Bio" forKey:@"bio"];
+    [object setObject:@"555555555" forKey:@"phoneNumber"];
+    [object save];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Speaker"];
+    PFObject *objectFromParser = [query getObjectWithId:object.objectId];
+    
+    Speaker *mapedObject = [[Speaker alloc] init];
+    [mapedObject mapParserObject:objectFromParser];
+    
+    BOOL assert_entity_mapping = 
+    [mapedObject.firstName isEqualToString:@"FirstName"]
+    && [mapedObject.lastName isEqualToString:@"LastName"]
+    && [mapedObject.email isEqualToString:@"email@nscoders.org"]
+    && [mapedObject.twitter isEqualToString:@"@anonymous"]
+    && [mapedObject.bio isEqualToString:@"Bio"]
+    && [mapedObject.phoneNumber isEqualToString:@"555555555"];
+    
+    STAssertTrue(assert_entity_mapping, @"Could not map speaker from parse object");
+    
+    [objectFromParser delete];
+}
+
 @end

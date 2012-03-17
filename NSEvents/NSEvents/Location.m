@@ -2,6 +2,7 @@
 
 @implementation Location
 
+@synthesize objectId;
 @synthesize longitud;
 @synthesize latitud;
 @synthesize title;

@@ -86,7 +86,7 @@ Session *instance;
   STAssertEquals(instance.brief, @"TestBrief", @"Cannot set a brief for a session");
 }
 
-- (void)testCanMapParserSession
+- (void)testCanMapParseObject
 {
     NSDateFormatter *dateFormater = [[NSDateFormatter alloc] init];
     [dateFormater setDateFormat:@"dd/mm/yyyy"];

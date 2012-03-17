@@ -38,10 +38,10 @@
     eventSelected.location.address = @"Direccion";
     eventSelected.location.city = @"Ciudad";
     eventSelected.location.country = @"Country";
-    eventSelected.location.latitud = 41.408943;
-    eventSelected.location.longitud = 2.126601;
+    eventSelected.location.latitud = [NSNumber numberWithFloat:41.408943];
+    eventSelected.location.longitud = [NSNumber numberWithFloat:2.126601];
     
-    locationPoint= [[LocationPoint alloc]initWithTitle:eventSelected.location.title address:eventSelected.location.address city:eventSelected.location.city latitud:eventSelected.location.latitud longitud:eventSelected.location.longitud];
+    locationPoint= [[LocationPoint alloc]initWithTitle:eventSelected.location.title address:eventSelected.location.address city:eventSelected.location.city latitud:[eventSelected.location.latitud floatValue] longitud:[eventSelected.location.longitud floatValue]];
     
     [mapView addAnnotation:locationPoint];
    

@@ -11,7 +11,7 @@
 @property (strong)  NSDate*     endDate;
 @property (copy)    NSString*   hashtag;
 @property (strong)  Location*   location;
-@property (readonly)  NSArray*    sessions;
+@property (readonly)NSArray*    sessions;
 
 -(void) addSession:(Session*)session;
 
