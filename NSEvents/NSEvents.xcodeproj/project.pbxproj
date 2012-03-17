@@ -23,8 +23,6 @@
 		651525D2151497FF0074FA19 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 651525D1151497FF0074FA19 /* Event.m */; };
 		651525D515149CB60074FA19 /* LocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 651525D415149CB60074FA19 /* LocationTests.m */; };
 		651525D815149D360074FA19 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 651525D715149D360074FA19 /* Location.m */; };
-		652C17A31514B7DB004BEF69 /* SponsorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 652C17A21514B7DB004BEF69 /* SponsorTests.m */; };
-		652C17A71514BA12004BEF69 /* Sponsor.m in Sources */ = {isa = PBXBuildFile; fileRef = 652C17A61514BA12004BEF69 /* Sponsor.m */; };
 		655A6B191514A0FC00A4B2B7 /* EventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 655A6B181514A0FC00A4B2B7 /* EventTableViewController.m */; };
 		6D0FAA181514A79F00B5B3FA /* TimeAndPlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0FAA171514A79F00B5B3FA /* TimeAndPlaceViewController.m */; };
 		6D0FAA1B1514A84900B5B3FA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0FAA1A1514A84900B5B3FA /* MapKit.framework */; };
@@ -49,6 +47,7 @@
 		8A23B2051514B07000AC8F1D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1F71514B02800AC8F1D /* Security.framework */; };
 		8A23B2061514B07000AC8F1D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1F51514B02200AC8F1D /* CFNetwork.framework */; };
 		8A23B2071514B07000AC8F1D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1F31514B01B00AC8F1D /* AudioToolbox.framework */; };
+		8A23B20A1514B8EC00AC8F1D /* EventDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A23B2091514B8EC00AC8F1D /* EventDetailTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,10 +86,6 @@
 		651525D415149CB60074FA19 /* LocationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationTests.m; sourceTree = "<group>"; };
 		651525D615149D360074FA19 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		651525D715149D360074FA19 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
-		652C17A11514B7DB004BEF69 /* SponsorTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SponsorTests.h; sourceTree = "<group>"; };
-		652C17A21514B7DB004BEF69 /* SponsorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SponsorTests.m; sourceTree = "<group>"; };
-		652C17A51514BA12004BEF69 /* Sponsor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sponsor.h; sourceTree = "<group>"; };
-		652C17A61514BA12004BEF69 /* Sponsor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sponsor.m; sourceTree = "<group>"; };
 		655A6B171514A0FC00A4B2B7 /* EventTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableViewController.h; sourceTree = "<group>"; };
 		655A6B181514A0FC00A4B2B7 /* EventTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewController.m; sourceTree = "<group>"; };
 		6D0FAA161514A79F00B5B3FA /* TimeAndPlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeAndPlaceViewController.h; sourceTree = "<group>"; };
@@ -112,6 +107,8 @@
 		8A23B1FB1514B05600AC8F1D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		8A23B1FC1514B05600AC8F1D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8A23B1FD1514B05600AC8F1D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		8A23B2081514B8EC00AC8F1D /* EventDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailTableViewController.h; sourceTree = "<group>"; };
+		8A23B2091514B8EC00AC8F1D /* EventDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,8 +229,6 @@
 				8A23B1EB1514AFE000AC8F1D /* SessionTest.m */,
 				8A23B1EC1514AFE000AC8F1D /* SpeakerTests.h */,
 				8A23B1ED1514AFE000AC8F1D /* SpeakerTests.m */,
-				652C17A11514B7DB004BEF69 /* SponsorTests.h */,
-				652C17A21514B7DB004BEF69 /* SponsorTests.m */,
 				651525BF151493BE0074FA19 /* Supporting Files */,
 			);
 			path = NSEventsTests;
@@ -259,8 +254,6 @@
 				651525D1151497FF0074FA19 /* Event.m */,
 				651525D615149D360074FA19 /* Location.h */,
 				651525D715149D360074FA19 /* Location.m */,
-				652C17A51514BA12004BEF69 /* Sponsor.h */,
-				652C17A61514BA12004BEF69 /* Sponsor.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -272,6 +265,8 @@
 				655A6B181514A0FC00A4B2B7 /* EventTableViewController.m */,
 				6D0FAA161514A79F00B5B3FA /* TimeAndPlaceViewController.h */,
 				6D0FAA171514A79F00B5B3FA /* TimeAndPlaceViewController.m */,
+				8A23B2081514B8EC00AC8F1D /* EventDetailTableViewController.h */,
+				8A23B2091514B8EC00AC8F1D /* EventDetailTableViewController.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -390,7 +385,7 @@
 				651525D815149D360074FA19 /* Location.m in Sources */,
 				655A6B191514A0FC00A4B2B7 /* EventTableViewController.m in Sources */,
 				6D0FAA181514A79F00B5B3FA /* TimeAndPlaceViewController.m in Sources */,
-				652C17A71514BA12004BEF69 /* Sponsor.m in Sources */,
+				8A23B20A1514B8EC00AC8F1D /* EventDetailTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,7 +399,6 @@
 				8A23B1E81514AFC400AC8F1D /* Speaker.m in Sources */,
 				8A23B1EE1514AFE000AC8F1D /* SessionTest.m in Sources */,
 				8A23B1EF1514AFE000AC8F1D /* SpeakerTests.m in Sources */,
-				652C17A31514B7DB004BEF69 /* SponsorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
