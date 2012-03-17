@@ -47,6 +47,7 @@
 		8A23B2051514B07000AC8F1D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1F71514B02800AC8F1D /* Security.framework */; };
 		8A23B2061514B07000AC8F1D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1F51514B02200AC8F1D /* CFNetwork.framework */; };
 		8A23B2071514B07000AC8F1D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1F31514B01B00AC8F1D /* AudioToolbox.framework */; };
+		8A23B20A1514B8EC00AC8F1D /* EventDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A23B2091514B8EC00AC8F1D /* EventDetailTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,8 @@
 		8A23B1FB1514B05600AC8F1D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		8A23B1FC1514B05600AC8F1D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8A23B1FD1514B05600AC8F1D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		8A23B2081514B8EC00AC8F1D /* EventDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailTableViewController.h; sourceTree = "<group>"; };
+		8A23B2091514B8EC00AC8F1D /* EventDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +265,8 @@
 				655A6B181514A0FC00A4B2B7 /* EventTableViewController.m */,
 				6D0FAA161514A79F00B5B3FA /* TimeAndPlaceViewController.h */,
 				6D0FAA171514A79F00B5B3FA /* TimeAndPlaceViewController.m */,
+				8A23B2081514B8EC00AC8F1D /* EventDetailTableViewController.h */,
+				8A23B2091514B8EC00AC8F1D /* EventDetailTableViewController.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -380,6 +385,7 @@
 				651525D815149D360074FA19 /* Location.m in Sources */,
 				655A6B191514A0FC00A4B2B7 /* EventTableViewController.m in Sources */,
 				6D0FAA181514A79F00B5B3FA /* TimeAndPlaceViewController.m in Sources */,
+				8A23B20A1514B8EC00AC8F1D /* EventDetailTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
