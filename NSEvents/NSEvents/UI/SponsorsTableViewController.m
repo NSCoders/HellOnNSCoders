@@ -1,20 +1,18 @@
 //
-//  NewsTableViewController.m
+//  SponsorsTableViewController.m
 //  NSEvents
 //
 //  Created by Ivan Leider on 17/03/12.
 //  Copyright (c) 2012 Atípic software. All rights reserved.
 //
 
-#import "NewsTableViewController.h"
-#import <Twitter/Twitter.h>
+#import "SponsorsTableViewController.h"
 
-@interface NewsTableViewController ()
-@property (nonatomic, strong) NSArray *twitterResponse;
+@interface SponsorsTableViewController ()
+
 @end
 
-@implementation NewsTableViewController
-@synthesize twitterResponse;
+@implementation SponsorsTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -34,37 +32,6 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  
-  TWRequest *twitterRequest = [[TWRequest alloc] initWithURL:
-                               [NSURL URLWithString:@"http://search.twitter.com/search.json?q=%23nscoders_bcn"] 
-                      parameters:[NSDictionary dictionary]
-                   requestMethod:TWRequestMethodGET];
-  [twitterRequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
-    if (!responseData) {
-      NSLog(@"Error in Twitter request: %@", [error description]);
-      return ;
-    }
-    NSError *jsonError = nil;
-    
-    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseData 
-                                                         options:NSJSONReadingMutableLeaves 
-                                                           error:&jsonError];
-    NSLog(@"dict %@", dict);
-        
-    if (!dict) {
-      NSLog(@"Error parsing JSON: %@", [jsonError description]);
-      return ;
-    } else {
-      self.twitterResponse = [dict objectForKey:@"results"];
-      NSLog(@"parsed OK: %@", self.twitterResponse);      
-      if (![self.twitterResponse count]) {
-        NSLog(@"NO RESULTS");
-        self.twitterResponse = [NSArray arrayWithObject:[NSDictionary dictionaryWithObjectsAndKeys:@"No results", @"text", nil]];
-      }
-      
-      [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:NULL waitUntilDone:NO];
-    }
-  }];
   
   // Uncomment the following line to preserve selection between presentations.
   // self.clearsSelectionOnViewWillAppear = NO;
@@ -89,23 +56,25 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+#warning Potentially incomplete method implementation.
   // Return the number of sections.
-  return 1;
+  return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+#warning Incomplete method implementation.
   // Return the number of rows in the section.
-  return [self.twitterResponse count];
+  return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  static NSString *CellIdentifier = @"TwitterCell";
+  static NSString *CellIdentifier = @"Cell";
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
   
   // Configure the cell...
-  cell.textLabel.text = [[self.twitterResponse objectAtIndex:indexPath.row] objectForKey:@"text"];
+  
   return cell;
 }
 

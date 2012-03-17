@@ -16,14 +16,20 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+  self.navigationController.navigationBarHidden = YES;
+  [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)viewDidUnload
 {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
+  [super viewDidUnload];
+  // Release any retained subviews of the main view.
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+  [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
