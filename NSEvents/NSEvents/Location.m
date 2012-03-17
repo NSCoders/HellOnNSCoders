@@ -14,7 +14,7 @@
 {
     PFQuery *query = [PFQuery queryWithClassName:@"Location"];
     [query whereKey:@"eventId" equalTo:objectId];
-    PFObject *parseObject = [query getObjectWithId:objectId];
+    PFObject *parseObject = [query getFirstObject];
     
     Location *result = [[Location alloc] init];
     [result mapParserObject:parseObject];

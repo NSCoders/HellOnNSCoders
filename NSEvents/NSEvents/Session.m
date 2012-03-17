@@ -24,4 +24,22 @@
   [internalSpeakers addObject:speaker];
 }
 
++ (NSArray*)findByEventObjectId:(NSString*)objectId
+{
+    NSMutableArray* result = [NSMutableArray array];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Session"];
+    [query whereKey:@"eventId" equalTo:objectId];
+    NSArray *parseObjects = [query findObjects];
+    
+    for (PFObject *object in parseObjects) 
+    {
+        Session *mapedObject = [[Session alloc] init];
+        [mapedObject mapParserObject:object];
+        [result addObject:mapedObject];
+    }
+    
+    return result;
+}
+
 @end

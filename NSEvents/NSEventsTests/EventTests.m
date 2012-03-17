@@ -210,7 +210,43 @@ Event *instance;
     [objectEvent delete];
     [objectLocation delete];
     
-    STAssertTrue(locationFromParse != nil, @"Could not map location from parse object");
+    STAssertTrue(locationFromParse != nil, @"Could not LazyLoadLocation in event");
+}
+
+
+- (void)testCanLazyLoadSessions
+{
+    NSDateFormatter *dateFormater = [[NSDateFormatter alloc] init];
+    [dateFormater setDateFormat:@"dd/mm/yyyy"];
+    
+    NSDate *start_date = [dateFormater dateFromString:@"01/01/2012"];
+    NSDate *end_date = [dateFormater dateFromString:@"02/01/2012"];
+    
+    PFObject *objectEvent = [PFObject objectWithClassName:@"Event"];
+    [objectEvent setObject:@"Test Title" forKey:@"title"];
+    [objectEvent setObject:end_date forKey:@"endDate"];
+    [objectEvent setObject:start_date forKey:@"startDate"];
+    [objectEvent setObject:@"#testhashtag" forKey:@"hashtag"];
+    [objectEvent save];
+    
+    PFObject *objectSession = [PFObject objectWithClassName:@"Session"];
+    [objectSession setObject:@"Test Title" forKey:@"title"];
+    [objectSession setObject:end_date forKey:@"endDate"];
+    [objectSession setObject:start_date forKey:@"startDate"];
+    [objectSession setObject:@"room" forKey:@"room"];
+    [objectSession setObject:@"brief" forKey:@"brief"];
+    [objectSession setObject:@"track" forKey:@"track"];
+    [objectSession setObject:@"track" forKey:@"track"];
+    [objectSession setObject:objectEvent.objectId forKey:@"eventId"];
+    [objectSession save];
+
+    Event *eventFromParse = [Event findById:objectEvent.objectId];
+    NSArray *sessionFromParse = eventFromParse.sessions; //Lazzy load sessions from parse
+    
+    [objectEvent delete];
+    [objectSession delete];
+    
+    STAssertTrue([sessionFromParse count] != 0, @"Could not LazyLoadSessions in event");
 }
 
 @end

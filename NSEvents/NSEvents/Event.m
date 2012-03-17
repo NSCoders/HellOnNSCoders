@@ -17,6 +17,11 @@
 
 -(NSArray*) sessions 
 {
+    if(internalSessions == nil)
+    {
+        internalSessions = (NSMutableArray*)[Session findByEventObjectId:self.objectId];
+    }
+    
     return internalSessions;
 }
 

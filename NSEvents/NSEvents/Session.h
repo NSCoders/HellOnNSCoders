@@ -15,4 +15,6 @@
 
 -(void) addSpeaker:(Speaker*)speaker;
 
++ (NSArray*)findByEventObjectId:(NSString*)objectId;
+
 @end
