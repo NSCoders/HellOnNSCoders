@@ -14,10 +14,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    return YES;
+  [Parse setApplicationId:@"Dff2FoFmjknZyjyizIZRZblDAJoJ2yGHeLKLTLC6" 
+                clientKey:@"JjAjp9gKqFYk1hBLgmVhE0b3RQ64n31ZYkpeCaSc"];
+  
+//  PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+//  [testObject setObject:@"bar" forKey:@"foo"];
+//  [testObject save];
+  
+  // Override point for customization after application launch.
+  return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
   // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
