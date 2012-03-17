@@ -27,22 +27,26 @@
 		6D0FAA181514A79F00B5B3FA /* TimeAndPlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0FAA171514A79F00B5B3FA /* TimeAndPlaceViewController.m */; };
 		6D0FAA1B1514A84900B5B3FA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0FAA1A1514A84900B5B3FA /* MapKit.framework */; };
 		6D0FAA241514AABD00B5B3FA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0FAA1A1514A84900B5B3FA /* MapKit.framework */; };
-		8A23B1C71514AD4A00AC8F1D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1C61514AD4A00AC8F1D /* Parse.framework */; };
-		8A23B1C81514AD4A00AC8F1D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1C61514AD4A00AC8F1D /* Parse.framework */; };
-		8A23B1CB1514AD7400AC8F1D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1CA1514AD7400AC8F1D /* AudioToolbox.framework */; };
-		8A23B1CD1514AD7C00AC8F1D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1CC1514AD7C00AC8F1D /* CFNetwork.framework */; };
-		8A23B1CF1514AD8100AC8F1D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1CE1514AD8100AC8F1D /* SystemConfiguration.framework */; };
-		8A23B1D11514AD8A00AC8F1D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1D01514AD8A00AC8F1D /* MobileCoreServices.framework */; };
-		8A23B1D31514AD9600AC8F1D /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1D21514AD9600AC8F1D /* libz.1.1.3.dylib */; };
-		8A23B1D51514AD9D00AC8F1D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1D41514AD9D00AC8F1D /* Security.framework */; };
-		8A23B1D71514ADA300AC8F1D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1D61514ADA300AC8F1D /* QuartzCore.framework */; };
-		8A23B1D81514ADB100AC8F1D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1D61514ADA300AC8F1D /* QuartzCore.framework */; };
-		8A23B1D91514ADB100AC8F1D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1D41514AD9D00AC8F1D /* Security.framework */; };
-		8A23B1DA1514ADB100AC8F1D /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1D21514AD9600AC8F1D /* libz.1.1.3.dylib */; };
-		8A23B1DB1514ADB100AC8F1D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1D01514AD8A00AC8F1D /* MobileCoreServices.framework */; };
-		8A23B1DC1514ADB100AC8F1D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1CE1514AD8100AC8F1D /* SystemConfiguration.framework */; };
-		8A23B1DD1514ADB100AC8F1D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1CC1514AD7C00AC8F1D /* CFNetwork.framework */; };
-		8A23B1DE1514ADB100AC8F1D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1CA1514AD7400AC8F1D /* AudioToolbox.framework */; };
+		8A23B1E71514AFC400AC8F1D /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A23B1E41514AFC400AC8F1D /* Session.m */; };
+		8A23B1E81514AFC400AC8F1D /* Speaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A23B1E61514AFC400AC8F1D /* Speaker.m */; };
+		8A23B1EE1514AFE000AC8F1D /* SessionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A23B1EB1514AFE000AC8F1D /* SessionTest.m */; };
+		8A23B1EF1514AFE000AC8F1D /* SpeakerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A23B1ED1514AFE000AC8F1D /* SpeakerTests.m */; };
+		8A23B1F11514B00D00AC8F1D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1F01514B00D00AC8F1D /* Parse.framework */; };
+		8A23B1F21514B01200AC8F1D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1F01514B00D00AC8F1D /* Parse.framework */; };
+		8A23B1F41514B01B00AC8F1D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1F31514B01B00AC8F1D /* AudioToolbox.framework */; };
+		8A23B1F61514B02200AC8F1D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1F51514B02200AC8F1D /* CFNetwork.framework */; };
+		8A23B1F81514B02800AC8F1D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1F71514B02800AC8F1D /* Security.framework */; };
+		8A23B1FA1514B02E00AC8F1D /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1F91514B02E00AC8F1D /* libz.1.1.3.dylib */; };
+		8A23B1FE1514B05600AC8F1D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1FB1514B05600AC8F1D /* MobileCoreServices.framework */; };
+		8A23B1FF1514B05600AC8F1D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1FC1514B05600AC8F1D /* QuartzCore.framework */; };
+		8A23B2001514B05600AC8F1D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1FD1514B05600AC8F1D /* SystemConfiguration.framework */; };
+		8A23B2011514B07000AC8F1D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1FB1514B05600AC8F1D /* MobileCoreServices.framework */; };
+		8A23B2021514B07000AC8F1D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1FC1514B05600AC8F1D /* QuartzCore.framework */; };
+		8A23B2031514B07000AC8F1D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1FD1514B05600AC8F1D /* SystemConfiguration.framework */; };
+		8A23B2041514B07000AC8F1D /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1F91514B02E00AC8F1D /* libz.1.1.3.dylib */; };
+		8A23B2051514B07000AC8F1D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1F71514B02800AC8F1D /* Security.framework */; };
+		8A23B2061514B07000AC8F1D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1F51514B02200AC8F1D /* CFNetwork.framework */; };
+		8A23B2071514B07000AC8F1D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A23B1F31514B01B00AC8F1D /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,14 +90,22 @@
 		6D0FAA161514A79F00B5B3FA /* TimeAndPlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeAndPlaceViewController.h; sourceTree = "<group>"; };
 		6D0FAA171514A79F00B5B3FA /* TimeAndPlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeAndPlaceViewController.m; sourceTree = "<group>"; };
 		6D0FAA1A1514A84900B5B3FA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		8A23B1C61514AD4A00AC8F1D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Vendor/Parse.framework; sourceTree = "<group>"; };
-		8A23B1CA1514AD7400AC8F1D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		8A23B1CC1514AD7C00AC8F1D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		8A23B1CE1514AD8100AC8F1D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		8A23B1D01514AD8A00AC8F1D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		8A23B1D21514AD9600AC8F1D /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
-		8A23B1D41514AD9D00AC8F1D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		8A23B1D61514ADA300AC8F1D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8A23B1E31514AFC400AC8F1D /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Session.h; sourceTree = "<group>"; };
+		8A23B1E41514AFC400AC8F1D /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Session.m; sourceTree = "<group>"; };
+		8A23B1E51514AFC400AC8F1D /* Speaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Speaker.h; sourceTree = "<group>"; };
+		8A23B1E61514AFC400AC8F1D /* Speaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Speaker.m; sourceTree = "<group>"; };
+		8A23B1EA1514AFE000AC8F1D /* SessionTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionTest.h; sourceTree = "<group>"; };
+		8A23B1EB1514AFE000AC8F1D /* SessionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionTest.m; sourceTree = "<group>"; };
+		8A23B1EC1514AFE000AC8F1D /* SpeakerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakerTests.h; sourceTree = "<group>"; };
+		8A23B1ED1514AFE000AC8F1D /* SpeakerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakerTests.m; sourceTree = "<group>"; };
+		8A23B1F01514B00D00AC8F1D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Vendor/Parse.framework; sourceTree = "<group>"; };
+		8A23B1F31514B01B00AC8F1D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		8A23B1F51514B02200AC8F1D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		8A23B1F71514B02800AC8F1D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		8A23B1F91514B02E00AC8F1D /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		8A23B1FB1514B05600AC8F1D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		8A23B1FC1514B05600AC8F1D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8A23B1FD1514B05600AC8F1D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,18 +113,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A23B1D71514ADA300AC8F1D /* QuartzCore.framework in Frameworks */,
-				8A23B1D51514AD9D00AC8F1D /* Security.framework in Frameworks */,
-				8A23B1D31514AD9600AC8F1D /* libz.1.1.3.dylib in Frameworks */,
-				8A23B1D11514AD8A00AC8F1D /* MobileCoreServices.framework in Frameworks */,
-				8A23B1CF1514AD8100AC8F1D /* SystemConfiguration.framework in Frameworks */,
-				8A23B1CD1514AD7C00AC8F1D /* CFNetwork.framework in Frameworks */,
-				8A23B1CB1514AD7400AC8F1D /* AudioToolbox.framework in Frameworks */,
 				6D0FAA241514AABD00B5B3FA /* MapKit.framework in Frameworks */,
 				6515259B151493BD0074FA19 /* UIKit.framework in Frameworks */,
 				6515259D151493BD0074FA19 /* Foundation.framework in Frameworks */,
 				6515259F151493BD0074FA19 /* CoreGraphics.framework in Frameworks */,
-				8A23B1C71514AD4A00AC8F1D /* Parse.framework in Frameworks */,
+				8A23B1F21514B01200AC8F1D /* Parse.framework in Frameworks */,
+				8A23B2011514B07000AC8F1D /* MobileCoreServices.framework in Frameworks */,
+				8A23B2021514B07000AC8F1D /* QuartzCore.framework in Frameworks */,
+				8A23B2031514B07000AC8F1D /* SystemConfiguration.framework in Frameworks */,
+				8A23B2041514B07000AC8F1D /* libz.1.1.3.dylib in Frameworks */,
+				8A23B2051514B07000AC8F1D /* Security.framework in Frameworks */,
+				8A23B2061514B07000AC8F1D /* CFNetwork.framework in Frameworks */,
+				8A23B2071514B07000AC8F1D /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,18 +132,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A23B1FE1514B05600AC8F1D /* MobileCoreServices.framework in Frameworks */,
+				8A23B1FF1514B05600AC8F1D /* QuartzCore.framework in Frameworks */,
+				8A23B2001514B05600AC8F1D /* SystemConfiguration.framework in Frameworks */,
+				8A23B1FA1514B02E00AC8F1D /* libz.1.1.3.dylib in Frameworks */,
+				8A23B1F81514B02800AC8F1D /* Security.framework in Frameworks */,
+				8A23B1F61514B02200AC8F1D /* CFNetwork.framework in Frameworks */,
+				8A23B1F41514B01B00AC8F1D /* AudioToolbox.framework in Frameworks */,
 				6D0FAA1B1514A84900B5B3FA /* MapKit.framework in Frameworks */,
 				651525B9151493BE0074FA19 /* SenTestingKit.framework in Frameworks */,
 				651525BA151493BE0074FA19 /* UIKit.framework in Frameworks */,
 				651525BB151493BE0074FA19 /* Foundation.framework in Frameworks */,
-				8A23B1C81514AD4A00AC8F1D /* Parse.framework in Frameworks */,
-				8A23B1D81514ADB100AC8F1D /* QuartzCore.framework in Frameworks */,
-				8A23B1D91514ADB100AC8F1D /* Security.framework in Frameworks */,
-				8A23B1DA1514ADB100AC8F1D /* libz.1.1.3.dylib in Frameworks */,
-				8A23B1DB1514ADB100AC8F1D /* MobileCoreServices.framework in Frameworks */,
-				8A23B1DC1514ADB100AC8F1D /* SystemConfiguration.framework in Frameworks */,
-				8A23B1DD1514ADB100AC8F1D /* CFNetwork.framework in Frameworks */,
-				8A23B1DE1514ADB100AC8F1D /* AudioToolbox.framework in Frameworks */,
+				8A23B1F11514B00D00AC8F1D /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,14 +172,14 @@
 		65152599151493BD0074FA19 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8A23B1D61514ADA300AC8F1D /* QuartzCore.framework */,
-				8A23B1D41514AD9D00AC8F1D /* Security.framework */,
-				8A23B1D21514AD9600AC8F1D /* libz.1.1.3.dylib */,
-				8A23B1D01514AD8A00AC8F1D /* MobileCoreServices.framework */,
-				8A23B1CE1514AD8100AC8F1D /* SystemConfiguration.framework */,
-				8A23B1CC1514AD7C00AC8F1D /* CFNetwork.framework */,
-				8A23B1CA1514AD7400AC8F1D /* AudioToolbox.framework */,
-				8A23B1C61514AD4A00AC8F1D /* Parse.framework */,
+				8A23B1FB1514B05600AC8F1D /* MobileCoreServices.framework */,
+				8A23B1FC1514B05600AC8F1D /* QuartzCore.framework */,
+				8A23B1FD1514B05600AC8F1D /* SystemConfiguration.framework */,
+				8A23B1F91514B02E00AC8F1D /* libz.1.1.3.dylib */,
+				8A23B1F71514B02800AC8F1D /* Security.framework */,
+				8A23B1F51514B02200AC8F1D /* CFNetwork.framework */,
+				8A23B1F31514B01B00AC8F1D /* AudioToolbox.framework */,
+				8A23B1F01514B00D00AC8F1D /* Parse.framework */,
 				6D0FAA1A1514A84900B5B3FA /* MapKit.framework */,
 				6515259A151493BD0074FA19 /* UIKit.framework */,
 				6515259C151493BD0074FA19 /* Foundation.framework */,
@@ -210,6 +222,10 @@
 				651525C5151493BE0074FA19 /* EventTests.m */,
 				651525D315149CB60074FA19 /* LocationTests.h */,
 				651525D415149CB60074FA19 /* LocationTests.m */,
+				8A23B1EA1514AFE000AC8F1D /* SessionTest.h */,
+				8A23B1EB1514AFE000AC8F1D /* SessionTest.m */,
+				8A23B1EC1514AFE000AC8F1D /* SpeakerTests.h */,
+				8A23B1ED1514AFE000AC8F1D /* SpeakerTests.m */,
 				651525BF151493BE0074FA19 /* Supporting Files */,
 			);
 			path = NSEventsTests;
@@ -227,6 +243,10 @@
 		651525CF151495F80074FA19 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				8A23B1E31514AFC400AC8F1D /* Session.h */,
+				8A23B1E41514AFC400AC8F1D /* Session.m */,
+				8A23B1E51514AFC400AC8F1D /* Speaker.h */,
+				8A23B1E61514AFC400AC8F1D /* Speaker.m */,
 				651525D0151497FF0074FA19 /* Event.h */,
 				651525D1151497FF0074FA19 /* Event.m */,
 				651525D615149D360074FA19 /* Location.h */,
@@ -369,6 +389,10 @@
 			files = (
 				651525C6151493BE0074FA19 /* EventTests.m in Sources */,
 				651525D515149CB60074FA19 /* LocationTests.m in Sources */,
+				8A23B1E71514AFC400AC8F1D /* Session.m in Sources */,
+				8A23B1E81514AFC400AC8F1D /* Speaker.m in Sources */,
+				8A23B1EE1514AFE000AC8F1D /* SessionTest.m in Sources */,
+				8A23B1EF1514AFE000AC8F1D /* SpeakerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

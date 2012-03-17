@@ -12,6 +12,42 @@
   [super tearDown];
 }
 
+- (void)testLocationHasATitle
+{
+  Location *instance = [[Location alloc] init];
+  
+  instance.title = @"Test";
+  
+  STAssertEquals(instance.title, @"Test", @"Cannot set a title for an event");
+}
+
+- (void)testLocationHasAnAddress
+{
+  Location *instance = [[Location alloc] init];
+  
+  instance.address = @"Test";
+  
+  STAssertEquals(instance.address, @"Test", @"Cannot set an address for a location");
+}
+
+- (void)testLocationHasACity
+{
+  Location *instance = [[Location alloc] init];
+  
+  instance.city = @"Test";
+  
+  STAssertEquals(instance.city, @"Test", @"Cannot set a city for a location");
+}
+
+- (void)testLocationHasACountry
+{
+  Location *instance = [[Location alloc] init];
+  
+  instance.country = @"Test";
+  
+  STAssertEquals(instance.country, @"Test", @"Cannot set a country for a location");
+}
+
 - (void)testCanCreateIntanceOfLocation
 {
   Location *instance = [[Location alloc] init];
