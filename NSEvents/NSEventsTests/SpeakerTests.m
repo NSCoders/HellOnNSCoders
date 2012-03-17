@@ -64,7 +64,7 @@ Speaker *instance;
 {
   instance.email = @"anonymous@nscoder.org";
   
-  STAssertNotNil(instance.gravatarURL, @"Cannot set a URL for a speaker");
+  STAssertTrue([[instance.gravatarURL absoluteString] isEqualToString:@"http://www.gravatar.com/avatar/be61b488c391f8e496bfb214367039d7"], @"Cannot set a URL for a speaker");
 }
 
 @end

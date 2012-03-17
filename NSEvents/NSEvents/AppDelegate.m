@@ -1,12 +1,5 @@
-//
-//  AppDelegate.m
-//  NSEvents
-//
-//  Created by Rubén Bernal Verneda on 17/03/12.
-//  Copyright (c) 2012 Atípic software. All rights reserved.
-//
-
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 
 @implementation AppDelegate
 
@@ -16,10 +9,6 @@
 {
   [Parse setApplicationId:@"Dff2FoFmjknZyjyizIZRZblDAJoJ2yGHeLKLTLC6" 
                 clientKey:@"JjAjp9gKqFYk1hBLgmVhE0b3RQ64n31ZYkpeCaSc"];
-  
-//  PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-//  [testObject setObject:@"bar" forKey:@"foo"];
-//  [testObject save];
   
   // Override point for customization after application launch.
   return YES;
