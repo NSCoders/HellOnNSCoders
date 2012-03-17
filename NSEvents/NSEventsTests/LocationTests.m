@@ -2,63 +2,57 @@
 
 @implementation LocationTests
 
+Location *instance;
+
 - (void)setUp
 {
   [super setUp];
+  
+  instance = [[Location alloc] init];
 }
 
 - (void)tearDown
 {
+  instance = nil;
+  
   [super tearDown];
 }
 
-- (void)testLocationHasATitle
-{
-  Location *instance = [[Location alloc] init];
-  
-  instance.title = @"Test";
-  
-  STAssertEquals(instance.title, @"Test", @"Cannot set a title for an event");
-}
-
-- (void)testLocationHasAnAddress
-{
-  Location *instance = [[Location alloc] init];
-  
-  instance.address = @"Test";
-  
-  STAssertEquals(instance.address, @"Test", @"Cannot set an address for a location");
-}
-
-- (void)testLocationHasACity
-{
-  Location *instance = [[Location alloc] init];
-  
-  instance.city = @"Test";
-  
-  STAssertEquals(instance.city, @"Test", @"Cannot set a city for a location");
-}
-
-- (void)testLocationHasACountry
-{
-  Location *instance = [[Location alloc] init];
-  
-  instance.country = @"Test";
-  
-  STAssertEquals(instance.country, @"Test", @"Cannot set a country for a location");
-}
-
 - (void)testCanCreateIntanceOfLocation
-{
-  Location *instance = [[Location alloc] init];
-  
+{  
   STAssertNotNil(instance, @"Cannot create instance of Event");
+}
+
+- (void)tesHasATitle
+{
+  instance.title = @"TestTitle";
+  
+  STAssertEquals(instance.title, @"TestTitle", @"Cannot set a title for an event");
+}
+
+- (void)testHasAnAddress
+{
+  instance.address = @"TestAddress";
+  
+  STAssertEquals(instance.address, @"TestAddress", @"Cannot set an address for a location");
+}
+
+- (void)testHasACity
+{
+  instance.city = @"TestCity";
+  
+  STAssertEquals(instance.city, @"TestCity", @"Cannot set a city for a location");
+}
+
+- (void)testHasACountry
+{
+  instance.country = @"TestCountry";
+  
+  STAssertEquals(instance.country, @"TestCountry", @"Cannot set a country for a location");
 }
 
 - (void)testLocationHasLongitude
 {
-  Location *instance = [[Location alloc] init];
-  
   instance.longitud = 1.0f;
   
   STAssertEquals(instance.longitud, 1.0f, @"Cannot set longitude for a location");
@@ -66,8 +60,6 @@
 
 - (void)testLocationHasLatidud
 {
-  Location *instance = [[Location alloc] init];
-  
   instance.latitud = 1.0f;
   
   STAssertEquals(instance.latitud, 1.0f, @"Cannot set latidud for a location");

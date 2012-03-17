@@ -1,22 +1,20 @@
 //
-//  EventTableViewController.m
+//  NewsTableViewController.m
 //  NSEvents
 //
 //  Created by Ivan Leider on 17/03/12.
 //  Copyright (c) 2012 Atípic software. All rights reserved.
 //
 
-#import "EventTableViewController.h"
-#import "Event.h"
-#import "EventDetailTableViewController.h"
-@interface EventTableViewController ()
+#import "NewsTableViewController.h"
+#import <Twitter/Twitter.h>
 
-@property (nonatomic, strong) NSMutableArray *events;
-
+@interface NewsTableViewController ()
+@property (nonatomic, strong) NSArray *twitterResponse;
 @end
 
-@implementation EventTableViewController
-@synthesize events;
+@implementation NewsTableViewController
+@synthesize twitterResponse;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -36,12 +34,37 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  self.events = [NSMutableArray arrayWithCapacity:3];
-  for (int i = 0; i < 3; i++) {
-    Event *event = [[Event alloc] init];
-    event.title = [NSString stringWithFormat:@"Event %i", i];
-    [self.events addObject:event];
-  }
+  
+  TWRequest *twitterRequest = [[TWRequest alloc] initWithURL:
+                               [NSURL URLWithString:@"http://search.twitter.com/search.json?q=%23nscoders_bcn"] 
+                      parameters:[NSDictionary dictionary]
+                   requestMethod:TWRequestMethodGET];
+  [twitterRequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
+    if (!responseData) {
+      NSLog(@"Error in Twitter request: %@", [error description]);
+      return ;
+    }
+    NSError *jsonError = nil;
+    
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseData 
+                                                         options:NSJSONReadingMutableLeaves 
+                                                           error:&jsonError];
+    NSLog(@"dict %@", dict);
+        
+    if (!dict) {
+      NSLog(@"Error parsing JSON: %@", [jsonError description]);
+      return ;
+    } else {
+      self.twitterResponse = [dict objectForKey:@"results"];
+      NSLog(@"parsed OK: %@", self.twitterResponse);      
+      if (![self.twitterResponse count]) {
+        NSLog(@"NO RESULTS");
+        self.twitterResponse = [NSArray arrayWithObject:[NSDictionary dictionaryWithObjectsAndKeys:@"No results", @"text", nil]];
+      }
+      
+      [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:NULL waitUntilDone:NO];
+    }
+  }];
   
   // Uncomment the following line to preserve selection between presentations.
   // self.clearsSelectionOnViewWillAppear = NO;
@@ -73,16 +96,16 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
   // Return the number of rows in the section.
-  return [events count];
+  return [self.twitterResponse count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  static NSString *CellIdentifier = @"EventCell";
+  static NSString *CellIdentifier = @"TwitterCell";
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
   
   // Configure the cell...
-  cell.textLabel.text = [[events objectAtIndex:indexPath.row] title];
+  cell.textLabel.text = [[self.twitterResponse objectAtIndex:indexPath.row] objectForKey:@"text"];
   return cell;
 }
 
@@ -136,15 +159,6 @@
    // Pass the selected object to the new view controller.
    [self.navigationController pushViewController:detailViewController animated:YES];
    */
-}
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-  EventDetailTableViewController *eventDetail = (EventDetailTableViewController*)segue.destinationViewController;
-  UITableViewCell *selectedCell = sender;
-  NSInteger selectedIndex = [self.tableView indexPathForCell:selectedCell].row;
-  eventDetail.event = [events objectAtIndex:selectedIndex];
-  NSLog(@"segue: %@, sender: %@", [segue description], [sender description]);
 }
 
 @end

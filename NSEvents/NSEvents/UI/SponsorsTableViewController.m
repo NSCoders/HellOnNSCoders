@@ -1,22 +1,18 @@
 //
-//  EventTableViewController.m
+//  SponsorsTableViewController.m
 //  NSEvents
 //
 //  Created by Ivan Leider on 17/03/12.
 //  Copyright (c) 2012 Atípic software. All rights reserved.
 //
 
-#import "EventTableViewController.h"
-#import "Event.h"
-#import "EventDetailTableViewController.h"
-@interface EventTableViewController ()
+#import "SponsorsTableViewController.h"
 
-@property (nonatomic, strong) NSMutableArray *events;
+@interface SponsorsTableViewController ()
 
 @end
 
-@implementation EventTableViewController
-@synthesize events;
+@implementation SponsorsTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -36,12 +32,6 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  self.events = [NSMutableArray arrayWithCapacity:3];
-  for (int i = 0; i < 3; i++) {
-    Event *event = [[Event alloc] init];
-    event.title = [NSString stringWithFormat:@"Event %i", i];
-    [self.events addObject:event];
-  }
   
   // Uncomment the following line to preserve selection between presentations.
   // self.clearsSelectionOnViewWillAppear = NO;
@@ -67,22 +57,23 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
   // Return the number of sections.
-  return 1;
+  return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+
   // Return the number of rows in the section.
-  return [events count];
+  return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  static NSString *CellIdentifier = @"EventCell";
+  static NSString *CellIdentifier = @"Cell";
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
   
   // Configure the cell...
-  cell.textLabel.text = [[events objectAtIndex:indexPath.row] title];
+  
   return cell;
 }
 
@@ -136,15 +127,6 @@
    // Pass the selected object to the new view controller.
    [self.navigationController pushViewController:detailViewController animated:YES];
    */
-}
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-  EventDetailTableViewController *eventDetail = (EventDetailTableViewController*)segue.destinationViewController;
-  UITableViewCell *selectedCell = sender;
-  NSInteger selectedIndex = [self.tableView indexPathForCell:selectedCell].row;
-  eventDetail.event = [events objectAtIndex:selectedIndex];
-  NSLog(@"segue: %@, sender: %@", [segue description], [sender description]);
 }
 
 @end

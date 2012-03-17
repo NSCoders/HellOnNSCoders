@@ -11,18 +11,31 @@
 
 @implementation SessionTest
 
+Session *instance;
+
+- (void)setUp
+{
+  [super setUp];
+  
+  instance = [[Session alloc] init];
+}
+
+- (void)tearDown
+{
+  instance = nil;
+  
+  [super tearDown];
+}
+
 - (void)testHasATitle
 {
-  Session *instance = [[Session alloc] init];
+  instance.title = @"TestTitle";
   
-  instance.title = @"Test";
-  
-  STAssertEquals(instance.title, @"Test", @"Cannot set a title for a session");
+  STAssertEquals(instance.title, @"TestTitle", @"Cannot set a title for a session");
 }
 
 - (void)testHasCanAddSpeaker
 {
-  Session *instance = [[Session alloc] init];
   Speaker *speaker = [[Speaker alloc] init];
   
   speaker.firstName = @"firstName";
@@ -31,13 +44,11 @@
   
   [instance addSpeaker: speaker];
   
-  STAssertTrue([instance.speakers count] == 1, @"Test", @"Cannot set a title for a session");
+  STAssertTrue([instance.speakers count] == 1, @"Cannot set a title for a session");
 }
 
 - (void)testHasAStartDate
 {
-  Session *instance = [[Session alloc] init];
-  
   NSDateFormatter *dateFormater = [[NSDateFormatter alloc] init];
   
   instance.startDate = [dateFormater dateFromString:@"01/01/2012"];
@@ -47,8 +58,6 @@
 
 - (void)testtHasAEndDate
 {
-  Session *instance = [[Session alloc] init];
-  
   NSDateFormatter *dateFormater = [[NSDateFormatter alloc] init];
   
   instance.endDate = [dateFormater dateFromString:@"01/01/2012"];
@@ -58,29 +67,23 @@
 
 - (void)testHasARoom
 {
-  Session *instance = [[Session alloc] init];
+  instance.room = @"TestRoom";
   
-  instance.room = @"Test";
-  
-  STAssertEquals(instance.room, @"Test", @"Cannot set a room for a session");
+  STAssertEquals(instance.room, @"TestRoom", @"Cannot set a room for a session");
 }
 
 - (void)testHasATrack
 {
-  Session *instance = [[Session alloc] init];
+  instance.track = @"TestTrack";
   
-  instance.track = @"Test";
-  
-  STAssertEquals(instance.track, @"Test", @"Cannot set a track for a session");
+  STAssertEquals(instance.track, @"TestTrack", @"Cannot set a track for a session");
 }
 
 - (void)testHasABrief
 {
-  Session *instance = [[Session alloc] init];
+  instance.brief = @"TestBrief";
   
-  instance.brief = @"Test";
-  
-  STAssertEquals(instance.brief, @"Test", @"Cannot set a brief for a session");
+  STAssertEquals(instance.brief, @"TestBrief", @"Cannot set a brief for a session");
 }
 
 

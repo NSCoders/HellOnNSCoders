@@ -1,13 +1,13 @@
 #import <Foundation/Foundation.h>
 
-@interface Speaker : NSObject
+@interface Sponsor : NSObject
 
-@property (copy) NSString   *firstName;
-@property (copy) NSString   *lastName;
+@property (copy) NSString   *name;
 @property (copy) NSString   *email;
 @property (copy) NSString   *twitter;
 @property (copy) NSString   *bio;
-@property (readonly) NSURL  *gravatarURL;
+@property (copy) NSURL  *logoURL;
+@property (copy) NSURL  *webURL;
 @property (copy) NSString   *phoneNumber;
 
 @end
