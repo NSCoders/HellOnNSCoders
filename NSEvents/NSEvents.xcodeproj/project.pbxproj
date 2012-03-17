@@ -29,7 +29,7 @@
 		652C17F21514EFB4004BEF69 /* EventParseMapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 652C17F11514EFB4004BEF69 /* EventParseMapperTests.m */; };
 		655A6B191514A0FC00A4B2B7 /* EventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 655A6B181514A0FC00A4B2B7 /* EventTableViewController.m */; };
 		65AB72181514F12A00B98F80 /* EventParseMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AB72171514F12A00B98F80 /* EventParseMapper.m */; };
-		65AB721F1514F97100B98F80 /* SessionParseMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AB721E1514F97100B98F80 /* SessionParseMapper.m */; };
+		65AB722A1514FA9900B98F80 /* SessionParseMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 65AB721E1514F97100B98F80 /* SessionParseMapper.m */; };
 		6D015B621514C74000607F4A /* LocationPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D015B611514C74000607F4A /* LocationPoint.m */; };
 		6D015B641514CBFD00607F4A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D015B631514CBFD00607F4A /* CoreLocation.framework */; };
 		6D015B651514CC0500607F4A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D015B631514CBFD00607F4A /* CoreLocation.framework */; };
@@ -553,7 +553,6 @@
 				8A23B2251514D94F00AC8F1D /* AboutViewController.m in Sources */,
 				8A23B2281514DA5C00AC8F1D /* SponsorsTableViewController.m in Sources */,
 				65AB72181514F12A00B98F80 /* EventParseMapper.m in Sources */,
-				65AB721F1514F97100B98F80 /* SessionParseMapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,6 +570,7 @@
 				652C17B21514BC2E004BEF69 /* SponsorTests.m in Sources */,
 				652C17EF1514EA85004BEF69 /* EventRepositoryTests.m in Sources */,
 				652C17F21514EFB4004BEF69 /* EventParseMapperTests.m in Sources */,
+				65AB722A1514FA9900B98F80 /* SessionParseMapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

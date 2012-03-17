@@ -6,7 +6,7 @@
 @implementation SessionParseMapper
 
 // All code under test is in the iOS Application
-- (void)testAppDelegate
+- (void)test
 {
     id yourApplicationDelegate = [[UIApplication sharedApplication] delegate];
     STAssertNotNil(yourApplicationDelegate, @"UIApplication failed to find the AppDelegate");
