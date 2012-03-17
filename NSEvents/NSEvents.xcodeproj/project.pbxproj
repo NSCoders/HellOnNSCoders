@@ -20,6 +20,7 @@
 		651525BB151493BE0074FA19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6515259C151493BD0074FA19 /* Foundation.framework */; };
 		651525C3151493BE0074FA19 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 651525C1151493BE0074FA19 /* InfoPlist.strings */; };
 		651525C6151493BE0074FA19 /* NSEventsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 651525C5151493BE0074FA19 /* NSEventsTests.m */; };
+		8A23B1B915149A8000AC8F1D /* EventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A23B1B815149A8000AC8F1D /* EventTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		651525C2151493BE0074FA19 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		651525C4151493BE0074FA19 /* NSEventsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSEventsTests.h; sourceTree = "<group>"; };
 		651525C5151493BE0074FA19 /* NSEventsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSEventsTests.m; sourceTree = "<group>"; };
+		8A23B1B715149A8000AC8F1D /* EventTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventTableViewController.h; path = UI/EventTableViewController.h; sourceTree = "<group>"; };
+		8A23B1B815149A8000AC8F1D /* EventTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventTableViewController.m; path = UI/EventTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,7 @@
 		651525A0151493BE0074FA19 /* NSEvents */ = {
 			isa = PBXGroup;
 			children = (
+				8A23B1B5151499E100AC8F1D /* UI */,
 				651525A9151493BE0074FA19 /* AppDelegate.h */,
 				651525AA151493BE0074FA19 /* AppDelegate.m */,
 				651525AC151493BE0074FA19 /* MainStoryboard.storyboard */,
@@ -149,6 +153,15 @@
 				651525C1151493BE0074FA19 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8A23B1B5151499E100AC8F1D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8A23B1B715149A8000AC8F1D /* EventTableViewController.h */,
+				8A23B1B815149A8000AC8F1D /* EventTableViewController.m */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +274,7 @@
 				651525A7151493BE0074FA19 /* main.m in Sources */,
 				651525AB151493BE0074FA19 /* AppDelegate.m in Sources */,
 				651525B1151493BE0074FA19 /* ViewController.m in Sources */,
+				8A23B1B915149A8000AC8F1D /* EventTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +444,7 @@
 				651525CB151493BE0074FA19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		651525CC151493BE0074FA19 /* Build configuration list for PBXNativeTarget "NSEventsTests" */ = {
 			isa = XCConfigurationList;
@@ -438,6 +453,7 @@
 				651525CE151493BE0074FA19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
