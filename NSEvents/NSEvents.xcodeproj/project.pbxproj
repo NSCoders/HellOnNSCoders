@@ -19,7 +19,10 @@
 		651525BA151493BE0074FA19 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6515259A151493BD0074FA19 /* UIKit.framework */; };
 		651525BB151493BE0074FA19 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6515259C151493BD0074FA19 /* Foundation.framework */; };
 		651525C3151493BE0074FA19 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 651525C1151493BE0074FA19 /* InfoPlist.strings */; };
-		651525C6151493BE0074FA19 /* NSEventsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 651525C5151493BE0074FA19 /* NSEventsTests.m */; };
+		651525C6151493BE0074FA19 /* EventTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 651525C5151493BE0074FA19 /* EventTests.m */; };
+		651525D2151497FF0074FA19 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 651525D1151497FF0074FA19 /* Event.m */; };
+		651525D515149CB60074FA19 /* LocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 651525D415149CB60074FA19 /* LocationTests.m */; };
+		651525D815149D360074FA19 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 651525D715149D360074FA19 /* Location.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +53,14 @@
 		651525B8151493BE0074FA19 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		651525C0151493BE0074FA19 /* NSEventsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSEventsTests-Info.plist"; sourceTree = "<group>"; };
 		651525C2151493BE0074FA19 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		651525C4151493BE0074FA19 /* NSEventsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSEventsTests.h; sourceTree = "<group>"; };
-		651525C5151493BE0074FA19 /* NSEventsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSEventsTests.m; sourceTree = "<group>"; };
+		651525C4151493BE0074FA19 /* EventTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventTests.h; sourceTree = "<group>"; };
+		651525C5151493BE0074FA19 /* EventTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventTests.m; sourceTree = "<group>"; };
+		651525D0151497FF0074FA19 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		651525D1151497FF0074FA19 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		651525D315149CB60074FA19 /* LocationTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationTests.h; sourceTree = "<group>"; };
+		651525D415149CB60074FA19 /* LocationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationTests.m; sourceTree = "<group>"; };
+		651525D615149D360074FA19 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		651525D715149D360074FA19 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +120,7 @@
 		651525A0151493BE0074FA19 /* NSEvents */ = {
 			isa = PBXGroup;
 			children = (
+				651525CF151495F80074FA19 /* model */,
 				651525A9151493BE0074FA19 /* AppDelegate.h */,
 				651525AA151493BE0074FA19 /* AppDelegate.m */,
 				651525AC151493BE0074FA19 /* MainStoryboard.storyboard */,
@@ -135,8 +145,10 @@
 		651525BE151493BE0074FA19 /* NSEventsTests */ = {
 			isa = PBXGroup;
 			children = (
-				651525C4151493BE0074FA19 /* NSEventsTests.h */,
-				651525C5151493BE0074FA19 /* NSEventsTests.m */,
+				651525C4151493BE0074FA19 /* EventTests.h */,
+				651525C5151493BE0074FA19 /* EventTests.m */,
+				651525D315149CB60074FA19 /* LocationTests.h */,
+				651525D415149CB60074FA19 /* LocationTests.m */,
 				651525BF151493BE0074FA19 /* Supporting Files */,
 			);
 			path = NSEventsTests;
@@ -149,6 +161,17 @@
 				651525C1151493BE0074FA19 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		651525CF151495F80074FA19 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				651525D0151497FF0074FA19 /* Event.h */,
+				651525D1151497FF0074FA19 /* Event.m */,
+				651525D615149D360074FA19 /* Location.h */,
+				651525D715149D360074FA19 /* Location.m */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +284,8 @@
 				651525A7151493BE0074FA19 /* main.m in Sources */,
 				651525AB151493BE0074FA19 /* AppDelegate.m in Sources */,
 				651525B1151493BE0074FA19 /* ViewController.m in Sources */,
+				651525D2151497FF0074FA19 /* Event.m in Sources */,
+				651525D815149D360074FA19 /* Location.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +293,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				651525C6151493BE0074FA19 /* NSEventsTests.m in Sources */,
+				651525C6151493BE0074FA19 /* EventTests.m in Sources */,
+				651525D515149CB60074FA19 /* LocationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
