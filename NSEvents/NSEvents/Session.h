@@ -11,8 +11,14 @@
 
 @interface Session : NSObject
 
-@property (copy) NSString *title;
-@property (readonly) NSArray *speakers;
+@property (copy) NSString*      title;
+@property (readonly) NSArray*   speakers;
+@property (strong)  NSDate*     startDate;
+@property (strong)  NSDate*     endDate;
+@property (copy) NSString*      room;
+@property (copy) NSString*      track;
+@property (copy) NSString*      brief;
+
 
 -(void) addSpeaker:(Speaker*)speaker;
 

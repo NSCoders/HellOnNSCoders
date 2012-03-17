@@ -1,4 +1,5 @@
 #import "EventTests.h"
+#import "Session.h"
 
 @implementation EventTests
 
@@ -80,5 +81,17 @@
   
   STAssertTrue(instance.location == location,  @"Cannot set a location for an event");
 }
+
+- (void)testHasCanAddSession
+{
+  Event *instance = [[Event alloc] init];
+  Session *session = [[Session alloc] init];
+  
+  [instance addSession: session];
+  
+  STAssertTrue([instance.sessions count] == 1, @"Test", @"Cannot add a session for an event");
+}
+
+
 
 @end

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Location.h"
+#import "Session.h"
 
 @interface Event : NSObject
 
@@ -17,5 +18,8 @@
 @property (assign)  int         identifier;
 @property (copy)    NSString*   hashtag;
 @property (strong)  Location*   location;
+@property (readonly)  NSArray*    sessions;
+
+-(void) addSession:(Session*)session;
 
 @end
