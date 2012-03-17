@@ -8,7 +8,7 @@
 
 #import "NewsTableViewController.h"
 #import <Twitter/Twitter.h>
-
+#import "NewsCell.h"
 @interface NewsTableViewController ()
 @property (nonatomic, strong) NSArray *twitterResponse;
 @property (nonatomic, strong) UIActivityIndicatorView *activity;
@@ -107,10 +107,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
   static NSString *CellIdentifier = @"TwitterCell";
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+  NewsCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
   
   // Configure the cell...
-  cell.textLabel.text = [[self.twitterResponse objectAtIndex:indexPath.row] objectForKey:@"text"];
+  cell.text.text = [[self.twitterResponse objectAtIndex:indexPath.row] objectForKey:@"text"];
   return cell;
 }
 

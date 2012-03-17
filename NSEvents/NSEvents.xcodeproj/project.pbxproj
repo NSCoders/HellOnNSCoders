@@ -82,6 +82,7 @@
 		8AA9CC741514F0EA00F13C0D /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A23B21C1514D76C00AC8F1D /* background@2x.png */; };
 		8AA9CC7F1514F5A200F13C0D /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AA9CC7D1514F5A200F13C0D /* Icon.png */; };
 		8AA9CC801514F5A200F13C0D /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AA9CC7E1514F5A200F13C0D /* Icon@2x.png */; };
+		8AFE99281514FDA2000DF99E /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AFE99271514FDA2000DF99E /* NewsCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,6 +188,8 @@
 		8A23B2271514DA5C00AC8F1D /* SponsorsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SponsorsTableViewController.m; sourceTree = "<group>"; };
 		8AA9CC7D1514F5A200F13C0D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = SOURCE_ROOT; };
 		8AA9CC7E1514F5A200F13C0D /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = SOURCE_ROOT; };
+		8AFE99261514FDA2000DF99E /* NewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCell.h; sourceTree = "<group>"; };
+		8AFE99271514FDA2000DF99E /* NewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -371,6 +374,8 @@
 				8A23B2241514D94F00AC8F1D /* AboutViewController.m */,
 				8A23B2261514DA5C00AC8F1D /* SponsorsTableViewController.h */,
 				8A23B2271514DA5C00AC8F1D /* SponsorsTableViewController.m */,
+				8AFE99261514FDA2000DF99E /* NewsCell.h */,
+				8AFE99271514FDA2000DF99E /* NewsCell.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -553,6 +558,7 @@
 				8A23B2251514D94F00AC8F1D /* AboutViewController.m in Sources */,
 				8A23B2281514DA5C00AC8F1D /* SponsorsTableViewController.m in Sources */,
 				65AB72181514F12A00B98F80 /* EventParseMapper.m in Sources */,
+				8AFE99281514FDA2000DF99E /* NewsCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
