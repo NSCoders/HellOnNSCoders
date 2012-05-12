@@ -43,7 +43,7 @@
   __block SpeakersTableViewController *weakSelf = self; 
   
   dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//    weakSelf.speakers = self.event.speakers;
+    weakSelf.speakers = self.event.speakers;
     dispatch_sync(dispatch_get_main_queue(), ^{
       [weakSelf.tableView reloadData];
       [weakSelf.activity stopAnimating];
@@ -88,7 +88,9 @@
   
   // Configure the cell...
   Speaker *speaker = [self.speakers objectAtIndex:indexPath.row];
-  cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", speaker.firstName, speaker.lastName];
+  cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", 
+                         speaker.firstName ?: @"" ,
+                         speaker.lastName ?: @""];
   return cell;
 }
 
