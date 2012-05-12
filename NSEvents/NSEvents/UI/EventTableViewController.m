@@ -11,7 +11,7 @@
 #import "EventDetailTableViewController.h"
 @interface EventTableViewController ()
 
-@property (nonatomic, strong) NSMutableArray *events;
+@property (nonatomic, strong) NSArray *events;
 @property (nonatomic, strong) UIActivityIndicatorView *activity;
 
 @end
@@ -38,13 +38,6 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  self.events = [NSMutableArray arrayWithCapacity:3];
-  for (int i = 0; i < 3; i++) {
-    Event *event = [[Event alloc] init];
-    event.title = [NSString stringWithFormat:@"Event %i", i];
-    [self.events addObject:event];
-  }
-  
   // Uncomment the following line to preserve selection between presentations.
   self.clearsSelectionOnViewWillAppear = NO;
   
@@ -52,7 +45,18 @@
   // self.navigationItem.rightBarButtonItem = self.editButtonItem;
   self.activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
   self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.activity];
-  //[self.activity startAnimating];
+  [self.activity startAnimating];
+  
+  __block EventTableViewController *weakSelf = self; 
+  
+  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    weakSelf.events = [Event findAll];
+    dispatch_sync(dispatch_get_main_queue(), ^{
+      [weakSelf.tableView reloadData];
+      [weakSelf.activity stopAnimating];
+    });
+    
+  });
 
 }
 

@@ -13,7 +13,7 @@
 @interface TimeAndPlaceViewController : UIViewController <MKMapViewDelegate>
 
 @property (nonatomic, strong) IBOutlet MKMapView *mapView;
-@property (nonatomic, strong) Event *eventSelected;
+@property (nonatomic, strong) Event *event;
 @property (nonatomic, strong) LocationPoint *locationPoint;
 
 @property (nonatomic,strong) IBOutlet UILabel *lblTitle;

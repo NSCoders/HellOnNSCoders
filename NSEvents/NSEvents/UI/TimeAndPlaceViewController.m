@@ -14,7 +14,7 @@
 @end
 
 @implementation TimeAndPlaceViewController
-@synthesize mapView,eventSelected,locationPoint;
+@synthesize mapView,event,locationPoint;
 @synthesize lblTitle,lblEndDate,lblHashtag,lblStartDate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -29,19 +29,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"Evento %@",eventSelected.title);
+    NSLog(@"Evento %@",event.title);
     
-    eventSelected.location=[[Location alloc]init];
+    event.location=[[Location alloc]init];
     
     
-    eventSelected.location.title = eventSelected.title;
-    eventSelected.location.address = @"Direccion";
-    eventSelected.location.city = @"Ciudad";
-    eventSelected.location.country = @"Country";
-    eventSelected.location.latitud = [NSNumber numberWithFloat:41.408943];
-    eventSelected.location.longitud = [NSNumber numberWithFloat:2.126601];
+    event.location.title = event.title;
+    event.location.address = @"Direccion";
+    event.location.city = @"Ciudad";
+    event.location.country = @"Country";
+    event.location.latitud = [NSNumber numberWithFloat:41.408943];
+    event.location.longitud = [NSNumber numberWithFloat:2.126601];
     
-    locationPoint= [[LocationPoint alloc]initWithTitle:eventSelected.location.title address:eventSelected.location.address city:eventSelected.location.city latitud:[eventSelected.location.latitud floatValue] longitud:[eventSelected.location.longitud floatValue]];
+    locationPoint= [[LocationPoint alloc]initWithTitle:event.location.title address:event.location.address city:event.location.city latitud:[event.location.latitud floatValue] longitud:[event.location.longitud floatValue]];
     
     [mapView addAnnotation:locationPoint];
    
@@ -58,10 +58,10 @@
     NSDateFormatter *start=[[NSDateFormatter alloc]init];
     NSDateFormatter *end =[[NSDateFormatter alloc]init];
     
-    lblTitle.text=eventSelected.title;
-    lblStartDate.text=[start stringFromDate:eventSelected.startDate];
-    lblEndDate.text=[end stringFromDate:eventSelected.startDate];
-    lblHashtag.text= eventSelected.hashtag;
+    lblTitle.text=event.title;
+    lblStartDate.text=[start stringFromDate:event.startDate];
+    lblEndDate.text=[end stringFromDate:event.startDate];
+    lblHashtag.text= event.hashtag;
     
 	// Do any additional setup after loading the view.
 }
