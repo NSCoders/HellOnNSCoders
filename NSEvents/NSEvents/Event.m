@@ -41,8 +41,13 @@
             }
         }
     }
+    NSSortDescriptor *firstDescriptor = [[NSSortDescriptor alloc] initWithKey:@"firstName"
+                                                                     ascending:YES];
+    NSArray *descriptors = [NSArray arrayWithObjects:firstDescriptor, nil];
+
+    NSArray *sortInternalSpeakers = [internalSpeakers sortedArrayUsingDescriptors:descriptors];
     
-    return internalSpeakers;
+    return sortInternalSpeakers;
 }
 
 -(NSArray*) sessions 
