@@ -46,7 +46,7 @@ Event *instance;
   STAssertEquals(instance.startDate,[dateFormater dateFromString:@"01/01/2012"], @"Cannot set a start date for an event");
 }
 
-- (void)testtHasAEndDate
+- (void)testHasAEndDate
 {
   NSDateFormatter *dateFormater = [[NSDateFormatter alloc] init];
   

@@ -1,6 +1,6 @@
 #import "ParseActiveRecord.h"
 
-@interface Sponsor : ParseActiveRecord
+@interface Sponsor : ParseActiveRecord <ParseActiveRecordProtocol>
 
 @property (copy) NSString   *name;
 @property (copy) NSString   *email;

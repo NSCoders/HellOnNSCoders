@@ -1,6 +1,6 @@
 #import "ParseActiveRecord.h"
 
-@interface Speaker : ParseActiveRecord
+@interface Speaker : ParseActiveRecord <ParseActiveRecordProtocol>
 
 @property (copy) NSString   *firstName;
 @property (copy) NSString   *lastName;

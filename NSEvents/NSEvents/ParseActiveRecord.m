@@ -11,25 +11,54 @@
     // with name matching parse object properties
     for (NSString* key in parserObject.allKeys) 
     {
+        if([key isEqualToString:@"location"])
+            {
+                NSLog(@"aqui");
+            }
+        
         [self setValue:[parserObject objectForKey:key] forKey:key];
     }
     
     self.objectId = parserObject.objectId;
 }
 
-+ (id) findById:(NSString*)objectId
++ (id) findById:(NSString*)objectId entityName:(NSString*)entityName
 {
-    @throw  @"Not implemented on base class";
+    PFQuery *query = [PFQuery queryWithClassName:entityName];
+    PFObject *parseObject = [query getObjectWithId:objectId];
+    
+    id mapedObject = [[NSClassFromString(entityName) alloc] init];
+    [mapedObject mapParserObject:parseObject];
+    
+    return mapedObject;
 }
 
-+ (NSArray*) findAll
++ (NSArray*) findAllRecords:(NSString*)entityName
 {
-    @throw  @"Not implemented on base class";
+    NSMutableArray* result = [NSMutableArray array];
+    
+    PFQuery *query = [PFQuery queryWithClassName:entityName];
+    NSArray *parseObjects = [query findObjects];
+    
+    for (PFObject *object in parseObjects) 
+    {
+        id mapedObject = [[NSClassFromString(entityName) alloc] init];
+        [mapedObject mapParserObject:object];
+        [result addObject:mapedObject];
+    }
+    
+    return result;
 }
 
-+ (id) findFirst
++ (id) findFirstRecord:(NSString*)entityName
 {
-    @throw  @"Not implemented on base class";
+    PFQuery *query = [PFQuery queryWithClassName:entityName];
+    PFObject *parseObject = [query getFirstObject];
+    
+    id mapedObject = [[NSClassFromString(entityName) alloc] init];
+    [mapedObject mapParserObject:parseObject];
+    
+    return mapedObject;
 }
 
 @end
