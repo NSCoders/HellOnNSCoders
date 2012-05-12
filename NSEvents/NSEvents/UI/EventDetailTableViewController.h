@@ -10,7 +10,7 @@
 #import <EventKit/EventKit.h>
 
 @class Event;
-@interface EventDetailTableViewController : UITableViewController
+@interface EventDetailTableViewController : UITableViewController <UIAlertViewDelegate>
 @property (nonatomic, strong) Event *event;
 @property (strong, nonatomic) IBOutlet UITableViewCell *eventTitleCell;
 @end
