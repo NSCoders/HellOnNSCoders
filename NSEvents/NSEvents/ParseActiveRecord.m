@@ -24,19 +24,13 @@
 
 + (id) findById:(NSString*)objectId entityName:(NSString*)entityName
 {
-    NSMutableArray* result = [NSMutableArray array];
-    
     PFQuery *query = [PFQuery queryWithClassName:entityName];
-    NSArray *parseObjects = [query findObjects];
+    PFObject *parseObject = [query getObjectWithId:objectId];
     
-    for (PFObject *object in parseObjects) 
-    {
-        id mapedObject = [[NSClassFromString(entityName) alloc] init];
-        [mapedObject mapParserObject:object];
-        [result addObject:mapedObject];
-    }
+    id mapedObject = [[NSClassFromString(entityName) alloc] init];
+    [mapedObject mapParserObject:parseObject];
     
-    return result;
+    return mapedObject;
 }
 
 + (NSArray*) findAllRecords:(NSString*)entityName
