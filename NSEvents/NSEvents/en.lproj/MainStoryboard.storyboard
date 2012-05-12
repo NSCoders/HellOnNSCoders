@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="j3v-Tx-vdZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="j3v-Tx-vdZ">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1179"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -183,7 +183,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
-                                            <segue destination="A6l-PY-aE6" kind="push" id="0OB-7R-Gzg"/>
+                                            <segue destination="A6l-PY-aE6" kind="push" identifier="TimeAndLocationSegue" id="0OB-7R-Gzg"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SpeakerCell" textLabel="o95-0t-8cV" style="IBUITableViewCellStyleDefault" id="oUg-eL-WLg">
@@ -204,7 +204,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
-                                            <segue destination="oKR-PM-VqJ" kind="push" id="cDS-Qh-su0"/>
+                                            <segue destination="oKR-PM-VqJ" kind="push" identifier="SpeakersSegue" id="cDS-Qh-su0"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SessionsCell" textLabel="yak-ge-L8K" style="IBUITableViewCellStyleDefault" id="OQ5-KA-wF0">
@@ -225,7 +225,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
-                                            <segue destination="z1s-OD-8Rz" kind="push" id="EqR-RZ-Xfv"/>
+                                            <segue destination="z1s-OD-8Rz" kind="push" identifier="SessionsSegue" id="EqR-RZ-Xfv"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -271,11 +271,11 @@
             </objects>
             <point key="canvasLocation" x="1873" y="-496"/>
         </scene>
-        <!--Table View Controller - Ponentes-->
+        <!--Speakers Table View Controller - Ponentes-->
         <scene sceneID="2ot-MD-zLk">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wo1-5O-sf1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="oKR-PM-VqJ" sceneMemberID="viewController">
+                <tableViewController id="oKR-PM-VqJ" customClass="SpeakersTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="j27-a2-GZ7">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -301,11 +301,11 @@
             </objects>
             <point key="canvasLocation" x="1901" y="168"/>
         </scene>
-        <!--Table View Controller - Sesiones-->
+        <!--Sessions Table View Controller - Sesiones-->
         <scene sceneID="aX9-az-mad">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XyV-5k-nyJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="z1s-OD-8Rz" sceneMemberID="viewController">
+                <tableViewController id="z1s-OD-8Rz" customClass="SessionsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="bGa-f9-sU6">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -465,12 +465,22 @@
         <class className="NewsTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NewsTableViewController.h"/>
         </class>
+        <class className="SessionsTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SessionsTableViewController.h"/>
+        </class>
+        <class className="SpeakersTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SpeakersTableViewController.h"/>
+        </class>
         <class className="SponsorsTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SponsorsTableViewController.h"/>
         </class>
         <class className="TimeAndPlaceViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TimeAndPlaceViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="lblEndDate" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblHashtag" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblStartDate" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblTitle" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
             </relationships>
         </class>
