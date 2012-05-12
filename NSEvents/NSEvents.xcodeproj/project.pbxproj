@@ -35,6 +35,7 @@
 		6D0FAA181514A79F00B5B3FA /* TimeAndPlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0FAA171514A79F00B5B3FA /* TimeAndPlaceViewController.m */; };
 		6D0FAA1B1514A84900B5B3FA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0FAA1A1514A84900B5B3FA /* MapKit.framework */; };
 		6D0FAA241514AABD00B5B3FA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0FAA1A1514A84900B5B3FA /* MapKit.framework */; };
+		6DF80CF8155E9F6200C0270D /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF80CF7155E9F6200C0270D /* EventKit.framework */; };
 		8A1E712D1514DBDA00210D7B /* about.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A1E711B1514DBDA00210D7B /* about.png */; };
 		8A1E712E1514DBDA00210D7B /* about@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A1E711C1514DBDA00210D7B /* about@2x.png */; };
 		8A1E712F1514DBDA00210D7B /* aboutact.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A1E711D1514DBDA00210D7B /* aboutact.png */; };
@@ -134,6 +135,7 @@
 		6D0FAA161514A79F00B5B3FA /* TimeAndPlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeAndPlaceViewController.h; sourceTree = "<group>"; };
 		6D0FAA171514A79F00B5B3FA /* TimeAndPlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeAndPlaceViewController.m; sourceTree = "<group>"; };
 		6D0FAA1A1514A84900B5B3FA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		6DF80CF7155E9F6200C0270D /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		8A1E711B1514DBDA00210D7B /* about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = about.png; sourceTree = "<group>"; };
 		8A1E711C1514DBDA00210D7B /* about@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about@2x.png"; sourceTree = "<group>"; };
 		8A1E711D1514DBDA00210D7B /* aboutact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aboutact.png; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DF80CF8155E9F6200C0270D /* EventKit.framework in Frameworks */,
 				6D015B641514CBFD00607F4A /* CoreLocation.framework in Frameworks */,
 				8A23B2141514BEEF00AC8F1D /* Twitter.framework in Frameworks */,
 				6D0FAA241514AABD00B5B3FA /* MapKit.framework in Frameworks */,
@@ -255,6 +258,7 @@
 		65152599151493BD0074FA19 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6DF80CF7155E9F6200C0270D /* EventKit.framework */,
 				6D015B631514CBFD00607F4A /* CoreLocation.framework */,
 				8A23B2131514BEEF00AC8F1D /* Twitter.framework */,
 				8A23B1FB1514B05600AC8F1D /* MobileCoreServices.framework */,
