@@ -70,7 +70,7 @@
     [internalSessions addObject:session];
 }
 
-- (Location*)location
+- (Location *)location
 {
     if(_location == nil)
     {
