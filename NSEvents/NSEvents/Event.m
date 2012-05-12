@@ -3,6 +3,7 @@
 @interface Event()
 
 @property (strong) NSMutableArray *internalSessions;
+@property (strong) NSMutableArray *internalSpeakers;
 
 @end
 
@@ -14,6 +15,40 @@
 @synthesize hashtag;
 @synthesize location = _location;
 @synthesize internalSessions;
+@synthesize internalSpeakers;
+
+-(NSArray*)speakers
+{
+    if(internalSpeakers == nil)
+    {
+        internalSpeakers = [[NSMutableArray alloc] init];
+        
+        PFQuery *query = [PFQuery queryWithClassName:@"SessionSpeaker"];
+        [query whereKey:@"eventId" equalTo:self.objectId];
+        NSArray *parseObjects = [query findObjects];
+        
+        for (PFObject *object in parseObjects) 
+        {            
+            NSString *stringPredicate = [NSString stringWithFormat: @"objectId = '%@'", [object objectForKey:@"speakerId"]];
+            NSPredicate *predicate = [NSPredicate predicateWithFormat: stringPredicate];
+            NSArray *matching = [internalSpeakers filteredArrayUsingPredicate:predicate];
+            
+            if(![matching count])
+            {
+                Speaker *speaker = [Speaker findById:[object objectForKey:@"speakerId"]];
+                
+                [self.internalSpeakers addObject:speaker];
+            }
+        }
+    }
+    NSSortDescriptor *firstDescriptor = [[NSSortDescriptor alloc] initWithKey:@"firstName"
+                                                                     ascending:YES];
+    NSArray *descriptors = [NSArray arrayWithObjects:firstDescriptor, nil];
+
+    NSArray *sortInternalSpeakers = [internalSpeakers sortedArrayUsingDescriptors:descriptors];
+    
+    return sortInternalSpeakers;
+}
 
 -(NSArray*) sessions 
 {
@@ -35,7 +70,7 @@
     [internalSessions addObject:session];
 }
 
-- (Location*)location
+- (Location *)location
 {
     if(_location == nil)
     {
@@ -43,26 +78,6 @@
     }
     
     return _location;
-}
-
-- (void) setLocation:(Location*)location
-{
-    _location = location;
-}
-
-+ (NSArray*) findAll
-{
-    return [ParseActiveRecord findAllRecords:NSStringFromClass([self class])];
-}
-
-+ (id) findFirst
-{
-    return [ParseActiveRecord findFirstRecord:NSStringFromClass([self class])];
-}
-
-+ (id) findById:(NSString*)objectId
-{
-    return [ParseActiveRecord findById:objectId entityName:NSStringFromClass([self class])];
 }
 
 @end

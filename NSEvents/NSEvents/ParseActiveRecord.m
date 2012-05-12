@@ -22,27 +22,27 @@
     self.objectId = parserObject.objectId;
 }
 
-+ (id) findById:(NSString*)objectId entityName:(NSString*)entityName
++ (id) findById:(NSString*)objectId
 {
-    PFQuery *query = [PFQuery queryWithClassName:entityName];
+    PFQuery *query = [PFQuery queryWithClassName:NSStringFromClass([self class])];
     PFObject *parseObject = [query getObjectWithId:objectId];
     
-    id mapedObject = [[NSClassFromString(entityName) alloc] init];
+    id mapedObject = [[[self class] alloc] init];
     [mapedObject mapParserObject:parseObject];
     
     return mapedObject;
 }
 
-+ (NSArray*) findAllRecords:(NSString*)entityName
++ (NSArray*) findAll
 {
     NSMutableArray* result = [NSMutableArray array];
     
-    PFQuery *query = [PFQuery queryWithClassName:entityName];
+    PFQuery *query = [PFQuery queryWithClassName:NSStringFromClass([self class])];
     NSArray *parseObjects = [query findObjects];
     
     for (PFObject *object in parseObjects) 
     {
-        id mapedObject = [[NSClassFromString(entityName) alloc] init];
+        id mapedObject = [[[self class] alloc] init];
         [mapedObject mapParserObject:object];
         [result addObject:mapedObject];
     }
@@ -50,12 +50,12 @@
     return result;
 }
 
-+ (id) findFirstRecord:(NSString*)entityName
++ (id) findFirst
 {
-    PFQuery *query = [PFQuery queryWithClassName:entityName];
+    PFQuery *query = [PFQuery queryWithClassName:NSStringFromClass([self class])];
     PFObject *parseObject = [query getFirstObject];
     
-    id mapedObject = [[NSClassFromString(entityName) alloc] init];
+    id mapedObject = [[[self class] alloc] init];
     [mapedObject mapParserObject:parseObject];
     
     return mapedObject;

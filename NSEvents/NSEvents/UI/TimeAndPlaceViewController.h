@@ -2,9 +2,10 @@
 //  TimeAndPlaceViewControllerViewController.h
 //  NSEvents
 //
-//  Created by Joan Guerrero Estrada on 17/03/12.
-//  Copyright (c) 2012 Atípic software. All rights reserved.
+//  Created by "Asociación NSCoders ESP" on 17/03/12.
+//  Copyright (c) 2012 NSCodersESP. All rights reserved.
 //
+
 
 #import <UIKit/UIKit.h>
 #import "Event.h"
