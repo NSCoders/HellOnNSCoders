@@ -3,7 +3,7 @@
 #import "Session.h"
 #import "ParseActiveRecord.h"
 
-@interface Event : ParseActiveRecord <ParseActiveRecordProtocol>
+@interface Event : ParseActiveRecord
 
 @property (copy)    NSString*   title;
 @property (strong)  NSDate*     startDate;
@@ -11,6 +11,7 @@
 @property (copy)    NSString*   hashtag;
 @property (strong)  Location*   location;
 @property (readonly) NSArray*    sessions;
+@property (readonly) NSArray*    speakers;
 
 -(void) addSession:(Session*)session;
 

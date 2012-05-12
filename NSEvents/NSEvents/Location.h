@@ -1,6 +1,6 @@
 #import "ParseActiveRecord.h"
 
-@interface Location : ParseActiveRecord <ParseActiveRecordProtocol>
+@interface Location : ParseActiveRecord
 
 @property (strong)  NSNumber  *longitud;
 @property (strong)  NSNumber  *latitud;

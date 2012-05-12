@@ -249,4 +249,89 @@ Event *instance;
     STAssertTrue([sessionFromParse count] != 0, @"Could not LazyLoadSessions in event");
 }
 
+- (void)testCanGetSpeakers
+{
+    NSDateFormatter *dateFormater = [[NSDateFormatter alloc] init];
+    [dateFormater setDateFormat:@"dd/mm/yyyy"];
+    
+    NSDate *start_date = [dateFormater dateFromString:@"01/01/2012"];
+    NSDate *end_date = [dateFormater dateFromString:@"02/01/2012"];
+    
+    PFObject *objectEvent = [PFObject objectWithClassName:@"Event"];
+    [objectEvent setObject:@"Test Title" forKey:@"title"];
+    [objectEvent setObject:end_date forKey:@"endDate"];
+    [objectEvent setObject:start_date forKey:@"startDate"];
+    [objectEvent setObject:@"#testhashtag" forKey:@"hashtag"];
+    [objectEvent save];
+    
+    PFObject *objectSession = [PFObject objectWithClassName:@"Session"];
+    [objectSession setObject:@"Test Title" forKey:@"title"];
+    [objectSession setObject:end_date forKey:@"endDate"];
+    [objectSession setObject:start_date forKey:@"startDate"];
+    [objectSession setObject:@"room" forKey:@"room"];
+    [objectSession setObject:@"brief" forKey:@"brief"];
+    [objectSession setObject:@"track" forKey:@"track"];
+    [objectSession setObject:objectEvent.objectId forKey:@"eventId"];
+    [objectSession save];
+
+    PFObject *objectSession2 = [PFObject objectWithClassName:@"Session"];
+    [objectSession2 setObject:@"Test Title2" forKey:@"title"];
+    [objectSession2 setObject:end_date forKey:@"endDate"];
+    [objectSession2 setObject:start_date forKey:@"startDate"];
+    [objectSession2 setObject:@"room2" forKey:@"room"];
+    [objectSession2 setObject:@"brief2" forKey:@"brief"];
+    [objectSession2 setObject:@"track2" forKey:@"track"];
+    [objectSession2 setObject:objectEvent.objectId forKey:@"eventId"];
+    [objectSession2 save];
+
+    PFObject *objectSpeaker1 = [PFObject objectWithClassName:@"Speaker"];
+    [objectSpeaker1 setObject:@"Speaker1" forKey:@"firstName"];
+    [objectSpeaker1 save];
+
+    PFObject *objectSpeaker2 = [PFObject objectWithClassName:@"Speaker"];
+    [objectSpeaker2 setObject:@"Speaker2" forKey:@"firstName"];
+    [objectSpeaker2 save];
+
+    PFObject *objectSpeaker3 = [PFObject objectWithClassName:@"Speaker"];
+    [objectSpeaker3 setObject:@"Speaker3" forKey:@"firstName"];
+    [objectSpeaker3 save];
+
+    PFObject *objectSessionSpeaker1 = [PFObject objectWithClassName:@"SessionSpeaker"];
+    [objectSessionSpeaker1 setObject:objectSession.objectId forKey:@"sessionId"];
+    [objectSessionSpeaker1 setObject:objectEvent.objectId forKey:@"eventId"];
+    [objectSessionSpeaker1 setObject:objectSpeaker1.objectId forKey:@"speakerId"];
+    [objectSessionSpeaker1 save];
+
+    PFObject *objectSessionSpeaker12 = [PFObject objectWithClassName:@"SessionSpeaker"];
+    [objectSessionSpeaker12 setObject:objectSession.objectId forKey:@"sessionId"];
+    [objectSessionSpeaker12 setObject:objectEvent.objectId forKey:@"eventId"];
+    [objectSessionSpeaker12 setObject:objectSpeaker3.objectId forKey:@"speakerId"];
+    [objectSessionSpeaker12 save];
+
+    PFObject *objectSessionSpeaker2 = [PFObject objectWithClassName:@"SessionSpeaker"];
+    [objectSessionSpeaker2 setObject:objectSession2.objectId forKey:@"sessionId"];
+    [objectSessionSpeaker2 setObject:objectEvent.objectId forKey:@"eventId"];
+    [objectSessionSpeaker2 setObject:objectSpeaker2.objectId forKey:@"speakerId"];
+    [objectSessionSpeaker2 save];
+    
+    PFObject *objectSessionSpeaker22 = [PFObject objectWithClassName:@"SessionSpeaker"];
+    [objectSessionSpeaker22 setObject:objectSession2.objectId forKey:@"sessionId"];
+    [objectSessionSpeaker22 setObject:objectEvent.objectId forKey:@"eventId"];
+    [objectSessionSpeaker22 setObject:objectSpeaker3.objectId forKey:@"speakerId"];
+    [objectSessionSpeaker22 save];
+
+    Event *eventFromParse = [Event findById:objectEvent.objectId];
+    NSArray *sessionFromParse = eventFromParse.speakers; //Lazzy load sessions from parse
+    
+    [objectEvent delete];
+    [objectSession delete];
+    [objectSpeaker1 delete];
+    [objectSpeaker2 delete];
+    [objectSpeaker3 delete];
+    [objectSessionSpeaker1 delete];
+    [objectSessionSpeaker2 delete];
+    
+    STAssertTrue([sessionFromParse count] == 3, @"Could not LazyLoadSessions in event");
+}
+
 @end

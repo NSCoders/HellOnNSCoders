@@ -2,7 +2,7 @@
 #import "Speaker.h"
 #import "ParseActiveRecord.h"
 
-@interface Session : ParseActiveRecord <ParseActiveRecordProtocol>
+@interface Session : ParseActiveRecord
 
 @property (copy) NSString*      title;
 @property (readonly) NSArray*   speakers;
