@@ -52,41 +52,17 @@
 
 + (NSArray*) findAll
 {
-    NSMutableArray* result = [NSMutableArray array];
-    
-    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
-    NSArray *parseObjects = [query findObjects];
-    
-    for (PFObject *object in parseObjects) 
-    {
-        Event *mapedObject = [[Event alloc] init];
-        [mapedObject mapParserObject:object];
-        [result addObject:mapedObject];
-    }
-    
-    return result;
+    return [ParseActiveRecord findAllRecords:NSStringFromClass([self class])];
 }
 
 + (id) findFirst
 {
-    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
-    PFObject *parseObject = [query getFirstObject];
-    
-    Event *result = [[Event alloc] init];
-    [result mapParserObject:parseObject];
-    
-    return result;
+    return [ParseActiveRecord findFirstRecord:NSStringFromClass([self class])];
 }
 
 + (id) findById:(NSString*)objectId
 {
-    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
-    PFObject *parseObject = [query getObjectWithId:objectId];
-    
-    Event *result = [[Event alloc] init];
-    [result mapParserObject:parseObject];
-    
-    return result;
+    return [ParseActiveRecord findById:objectId entityName:NSStringFromClass([self class])];
 }
 
 @end
