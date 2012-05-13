@@ -13,4 +13,6 @@
 @interface EventDetailTableViewController : UITableViewController <UIAlertViewDelegate>
 @property (nonatomic, strong) Event *event;
 @property (strong, nonatomic) IBOutlet UITableViewCell *eventTitleCell;
+
+-(void)addEvent;
 @end
