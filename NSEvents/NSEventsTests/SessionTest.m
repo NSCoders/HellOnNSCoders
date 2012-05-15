@@ -107,7 +107,7 @@ Session *instance;
     PFObject *fromParser = [query getObjectWithId:object.objectId];
     
     Session *mappedSession = [[Session alloc] init];
-    [mappedSession mapParserObject:fromParser];
+    [mappedSession mapParseObject:fromParser];
     
     BOOL assert_entity_mapping = [mappedSession.title isEqualToString:@"Test Title"]
     && [mappedSession.startDate isEqualToDate:start_date]

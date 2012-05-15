@@ -81,7 +81,7 @@ Location *instance;
     PFObject *objectFromParser = [query getObjectWithId:object.objectId];
     
     Location *mapedObject = [[Location alloc] init];
-    [mapedObject mapParserObject:objectFromParser];
+    [mapedObject mapParseObject:objectFromParser];
     
     BOOL assert_entity_mapping = [mapedObject.title isEqualToString:@"Test Title"]
     && [mapedObject.longitud floatValue] == 1.0
@@ -90,7 +90,7 @@ Location *instance;
     && [mapedObject.city isEqualToString:@"city name"]
     && [mapedObject.country isEqualToString:@"country name"];
     
-    [objectFromParser delete];
+    [object delete];
     
     STAssertTrue(assert_entity_mapping, @"Could not map location from parse object");
 }

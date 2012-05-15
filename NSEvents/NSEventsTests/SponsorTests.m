@@ -92,7 +92,7 @@ Sponsor *instance;
     PFObject *objectFromParser = [query getObjectWithId:object.objectId];
     
     Sponsor *mapedObject = [[Sponsor alloc] init];
-    [mapedObject mapParserObject:objectFromParser];
+    [mapedObject mapParseObject:objectFromParser];
     
     BOOL assert_entity_mapping = 
     [mapedObject.name isEqualToString:@"name"]
@@ -103,7 +103,7 @@ Sponsor *instance;
     && [mapedObject.webURL isEqualToString:@"http://www.nscoders.org"]
     && [mapedObject.phoneNumber isEqualToString:@"555555555"];
 
-    [objectFromParser delete];
+    [object delete];
     
     STAssertTrue(assert_entity_mapping, @"Could not map sponsor from parse object");
 }

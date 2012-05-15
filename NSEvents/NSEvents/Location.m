@@ -17,7 +17,7 @@
     PFObject *parseObject = [query getFirstObject];
     
     Location *result = [[Location alloc] init];
-    [result mapParserObject:parseObject];
+    [result mapParseObject:parseObject];
     
     return result;
 }

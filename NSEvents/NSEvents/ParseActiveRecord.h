@@ -14,6 +14,10 @@
 
 @property (copy)    NSString*   objectId;
 
-- (void)mapParserObject:(PFObject*)parserObject;
+- (void)mapParseObject:(PFObject*)parseObject;
+- (PFObject*)mapToParseObject;
+
+- (void)save;
+- (void)delete;
 
 @end

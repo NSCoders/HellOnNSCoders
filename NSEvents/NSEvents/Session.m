@@ -35,7 +35,7 @@
     for (PFObject *object in parseObjects) 
     {
         Session *mapedObject = [[Session alloc] init];
-        [mapedObject mapParserObject:object];
+        [mapedObject mapParseObject:object];
         [result addObject:mapedObject];
     }
     

@@ -82,7 +82,7 @@ Speaker *instance;
     PFObject *objectFromParser = [query getObjectWithId:object.objectId];
     
     Speaker *mapedObject = [[Speaker alloc] init];
-    [mapedObject mapParserObject:objectFromParser];
+    [mapedObject mapParseObject:objectFromParser];
     
     BOOL assert_entity_mapping = 
     [mapedObject.firstName isEqualToString:@"FirstName"]
@@ -92,7 +92,7 @@ Speaker *instance;
     && [mapedObject.bio isEqualToString:@"Bio"]
     && [mapedObject.phoneNumber isEqualToString:@"555555555"];
     
-    [objectFromParser delete];
+    [object delete];
     
     STAssertTrue(assert_entity_mapping, @"Could not map speaker from parse object");
 }
